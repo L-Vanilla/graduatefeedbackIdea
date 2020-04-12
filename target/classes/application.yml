@@ -1,0 +1,27 @@
+server:
+  port: 80
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/graduate?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 12345
+    hikari:
+      minimum-idle: 8
+      maximum-pool-size: 20
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  aop:
+    auto: true
+mybatis:
+  type-aliases-package: com.hebeu.graduatefeedback.pojo
+logging:
+  level:
+    com.neuedu.dao: debug
+#    19-12-28上传图片
+#spring.http.multipart.maxFileSize=100M
+#bspring.http.multipart.maxRequestSize=100Mb
+#spring.http.multipart.location=D:/projectImage/
+#spring.mvc.static-path-pattern=/**
+#spring.resources.static-locations=classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,file:${spring.http.multipart.location}
