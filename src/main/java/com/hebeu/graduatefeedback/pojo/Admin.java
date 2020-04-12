@@ -27,6 +27,8 @@ public class Admin extends MyPage{
 
     private Integer role;
 
+    private String idCard;
+
     public Integer getId() {
         return id;
     }
@@ -121,5 +123,13 @@ public class Admin extends MyPage{
 
     public void setRole(Integer role) {
         this.role = role;
+    }
+
+    public String getIdCard() {
+        return idCard;
+    }
+
+    public void setIdCard(String idCard) {
+        this.idCard = idCard == null ? null : idCard.trim();
     }
 }

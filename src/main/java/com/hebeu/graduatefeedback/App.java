@@ -9,7 +9,6 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
 @MapperScan("com.hebeu.graduatefeedback.dao")
 @ServletComponentScan
 public class App {
-
     public static void main(String[] args) {
         SpringApplication.run(App.class, args);
     }

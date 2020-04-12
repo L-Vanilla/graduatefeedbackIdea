@@ -14,6 +14,7 @@
     <result column="create_date" jdbcType="TIMESTAMP" property="createDate" />
     <result column="active" jdbcType="INTEGER" property="active" />
     <result column="role" jdbcType="INTEGER" property="role" />
+    <result column="id_card" jdbcType="VARCHAR" property="idCard" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -75,7 +76,7 @@
   </sql>
   <sql id="Base_Column_List">
     id, name, sex, password, phone, mail, college, rank, remarks, create_date, active, 
-    role
+    role, id_card
   </sql>
   <select id="selectByExample" parameterType="com.hebeu.graduatefeedback.pojo.AdminExample" resultMap="BaseResultMap">
     select
@@ -111,13 +112,13 @@
     insert into admin (id, name, sex, 
       password, phone, mail, 
       college, rank, remarks, 
-      create_date, active, role
-      )
+      create_date, active, role, 
+      id_card)
     values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{sex,jdbcType=INTEGER}, 
       #{password,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, #{mail,jdbcType=VARCHAR}, 
       #{college,jdbcType=VARCHAR}, #{rank,jdbcType=VARCHAR}, #{remarks,jdbcType=VARCHAR}, 
-      #{createDate,jdbcType=TIMESTAMP}, #{active,jdbcType=INTEGER}, #{role,jdbcType=INTEGER}
-      )
+      #{createDate,jdbcType=TIMESTAMP}, #{active,jdbcType=INTEGER}, #{role,jdbcType=INTEGER}, 
+      #{idCard,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.hebeu.graduatefeedback.pojo.Admin">
     insert into admin
@@ -158,6 +159,9 @@
       <if test="role != null">
         role,
       </if>
+      <if test="idCard != null">
+        id_card,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -195,6 +199,9 @@
       </if>
       <if test="role != null">
         #{role,jdbcType=INTEGER},
+      </if>
+      <if test="idCard != null">
+        #{idCard,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -243,6 +250,9 @@
       <if test="record.role != null">
         role = #{record.role,jdbcType=INTEGER},
       </if>
+      <if test="record.idCard != null">
+        id_card = #{record.idCard,jdbcType=VARCHAR},
+      </if>
     </set>
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -261,7 +271,8 @@
       remarks = #{record.remarks,jdbcType=VARCHAR},
       create_date = #{record.createDate,jdbcType=TIMESTAMP},
       active = #{record.active,jdbcType=INTEGER},
-      role = #{record.role,jdbcType=INTEGER}
+      role = #{record.role,jdbcType=INTEGER},
+      id_card = #{record.idCard,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -302,6 +313,9 @@
       <if test="role != null">
         role = #{role,jdbcType=INTEGER},
       </if>
+      <if test="idCard != null">
+        id_card = #{idCard,jdbcType=VARCHAR},
+      </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
@@ -317,7 +331,8 @@
       remarks = #{remarks,jdbcType=VARCHAR},
       create_date = #{createDate,jdbcType=TIMESTAMP},
       active = #{active,jdbcType=INTEGER},
-      role = #{role,jdbcType=INTEGER}
+      role = #{role,jdbcType=INTEGER},
+      id_card = #{idCard,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

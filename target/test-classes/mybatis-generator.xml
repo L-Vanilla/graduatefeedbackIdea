@@ -45,7 +45,7 @@
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
         <!-- 指定数据库表 -->
-        <!--//随访信息管理-->
+        <!--//管理员管理-->
         <table tableName="admin"></table>
 
         <!-- 有些表的字段需要指定java类型
