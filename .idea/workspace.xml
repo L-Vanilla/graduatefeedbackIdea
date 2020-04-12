@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="149db818-3f35-4b1b-962f-329b488d8a57" name="Default Changelist" comment="" />
+    <list default="true" id="149db818-3f35-4b1b-962f-329b488d8a57" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/mybatis-generator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/mybatis-generator.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,6 +55,40 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-1496330732">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="17" />
+          <entry key="xml" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="17" />
+          <entry key="XML" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="140" />
+          <entry key="txt" value="14" />
+          <entry key="xml" value="14" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="140" />
+          <entry key="PLAIN_TEXT" value="14" />
+          <entry key="XML" value="14" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FavoritesManager">
     <favorites_list name="graduatefeedback" />
@@ -58,10 +96,38 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/controller/AdminController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/controller/StudentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="34" selection-start-column="8" selection-end-column="34" />
+            <state relative-caret-position="312">
+              <caret line="34" column="43" lean-forward="true" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
+              <folding>
+                <element signature="e#1147#1148#0" expanded="true" />
+                <element signature="e#1197#1198#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/service/impl/StudentServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="97">
+              <caret line="61" column="37" lean-forward="true" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
+              <folding>
+                <element signature="e#2413#2414#0" expanded="true" />
+                <element signature="e#2486#2487#0" expanded="true" />
+                <element signature="e#2542#2543#0" expanded="true" />
+                <element signature="e#2615#2616#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/service/StudentService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -69,16 +135,21 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/pojo/Admin.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Admin</find>
+      <find>admin</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>admin</replace>
+      <replace>Student</replace>
+      <replace>student</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -86,15 +157,20 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/hebeu/graduatefeedback/test/AutoCode.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/pojo/MyPage.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/mybatis-generator.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/pojo/Admin.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/service/AdminService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/service/impl/AdminServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/Controller/AdminController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/config/MyConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/controller/AdminController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/config/MyConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/service/impl/AdminServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/service/AdminService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/pojo/Admin.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/mybatis-generator.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/pojo/Student.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/service/impl/StudentService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/service/StudentService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/controller/StudentController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/service/impl/StudentServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -113,60 +189,65 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="958" />
+    <option name="y" value="7" />
     <option name="width" value="960" />
     <option name="height" value="1038" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="graduatefeedback" type="b2602c69:ProjectViewProjectNode" />
-              <item name="graduatefeedback" type="462c0819:PsiDirectoryNode" />
+              <item name="graduatefeedbackIdea" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduatefeedbackIdea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="graduatefeedback" type="b2602c69:ProjectViewProjectNode" />
-              <item name="graduatefeedback" type="462c0819:PsiDirectoryNode" />
+              <item name="graduatefeedbackIdea" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduatefeedbackIdea" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="graduatefeedback" type="b2602c69:ProjectViewProjectNode" />
-              <item name="graduatefeedback" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="graduatefeedback" type="b2602c69:ProjectViewProjectNode" />
-              <item name="graduatefeedback" type="462c0819:PsiDirectoryNode" />
+              <item name="graduatefeedbackIdea" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduatefeedbackIdea" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="graduatefeedback" type="b2602c69:ProjectViewProjectNode" />
-              <item name="graduatefeedback" type="462c0819:PsiDirectoryNode" />
+              <item name="graduatefeedbackIdea" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduatefeedbackIdea" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="graduatefeedback" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="graduatefeedback" type="b2602c69:ProjectViewProjectNode" />
-              <item name="graduatefeedback" type="462c0819:PsiDirectoryNode" />
+              <item name="graduatefeedbackIdea" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduatefeedbackIdea" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="graduatefeedback" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="graduatefeedback" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduatefeedbackIdea" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduatefeedbackIdea" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="graduatefeedback" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="graduatefeedbackIdea" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduatefeedbackIdea" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -174,8 +255,8 @@
               <item name="pojo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="graduatefeedback" type="b2602c69:ProjectViewProjectNode" />
-              <item name="graduatefeedback" type="462c0819:PsiDirectoryNode" />
+              <item name="graduatefeedbackIdea" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduatefeedbackIdea" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -183,8 +264,8 @@
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="graduatefeedback" type="b2602c69:ProjectViewProjectNode" />
-              <item name="graduatefeedback" type="462c0819:PsiDirectoryNode" />
+              <item name="graduatefeedbackIdea" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduatefeedbackIdea" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -193,21 +274,36 @@
               <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="graduatefeedback" type="b2602c69:ProjectViewProjectNode" />
-              <item name="graduatefeedback" type="462c0819:PsiDirectoryNode" />
+              <item name="graduatefeedbackIdea" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduatefeedbackIdea" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="graduatefeedback" type="b2602c69:ProjectViewProjectNode" />
-              <item name="graduatefeedback" type="462c0819:PsiDirectoryNode" />
+              <item name="graduatefeedbackIdea" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduatefeedbackIdea" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="graduatefeedback" type="b2602c69:ProjectViewProjectNode" />
-              <item name="graduatefeedback" type="462c0819:PsiDirectoryNode" />
+              <item name="graduatefeedbackIdea" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduatefeedbackIdea" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="graduatefeedbackIdea" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduatefeedbackIdea" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="graduatefeedbackIdea" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduatefeedbackIdea" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
@@ -216,8 +312,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -227,21 +321,25 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586532834019" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586708278723" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\BiShe\graduatefeedback\src\test\java" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\BiShe\graduatefeedback\src\test" />
       <recent name="E:\BiShe\graduatefeedback\src\test\resources" />
       <recent name="E:\BiShe\graduatefeedback\src\test\java\com\hebeu\graduatefeedback\test" />
       <recent name="E:\BiShe\graduatefeedback\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.hebeu.graduatefeedback.controller" />
+      <recent name="com.hebeu.graduatefeedback.service.impl" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\BiShe\graduatefeedback\src\test\java" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -256,8 +354,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.App">
-    <configuration name="AutoCode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.App (1)">
+    <configuration name="AutoCode" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.hebeu.graduatefeedback.test.AutoCode" />
       <module name="graduatefeedback" />
       <extension name="coverage">
@@ -266,6 +364,19 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="graduate-feedback" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hebeu.graduatefeedback.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hebeu.graduatefeedback.App" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -285,12 +396,13 @@
     </configuration>
     <list>
       <item itemvalue="Application.AutoCode" />
+      <item itemvalue="Spring Boot.App (1)" />
       <item itemvalue="Spring Boot.App" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.App (1)" />
         <item itemvalue="Spring Boot.App" />
-        <item itemvalue="Application.AutoCode" />
       </list>
     </recent_temporary>
   </component>
@@ -309,16 +421,26 @@
       <workItem from="1586179798475" duration="1310000" />
       <workItem from="1586527018034" duration="4467000" />
       <workItem from="1586688977805" duration="1223000" />
+      <workItem from="1586697186725" duration="6643000" />
     </task>
+    <task id="LOCAL-00001" summary="添加管理员身份证字段">
+      <created>1586698553005</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1586698553005</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11560000" />
+    <option name="totallyTimeSpent" value="18203000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7917847" visible="true" weight="0.28485253" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7917847" visible="true" weight="0.13672923" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -329,8 +451,8 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.194051" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.6028369" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.22978723" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -359,6 +481,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="添加管理员身份证字段" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加管理员身份证字段" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/test/resources/application.yml" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -378,13 +504,6 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/com/hebeu/graduatefeedback/test/NewsTest.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/hebeu/graduatefeedback/test/AutoCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -392,27 +511,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/mybatis-generator.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/config/MyConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="13" column="75" selection-start-line="13" selection-start-column="75" selection-end-line="13" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/service/AdminService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/service/impl/AdminServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1580">
-          <caret line="75" column="22" lean-forward="true" selection-start-line="75" selection-start-column="22" selection-end-line="75" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-954">
+          <caret line="41" column="9" lean-forward="true" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -426,20 +528,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/controller/AdminController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/service/AdminService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="34" selection-start-column="8" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/config/MyConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-954">
-          <caret line="41" column="9" lean-forward="true" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+        <state relative-caret-position="224">
+          <caret line="10" column="5" lean-forward="true" selection-end-line="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -448,8 +540,97 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/pojo/Admin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="168">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/service/impl/AdminServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="75" column="22" lean-forward="true" selection-end-line="81" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1908#1909#0" expanded="true" />
+            <element signature="e#1965#1966#0" expanded="true" />
+            <element signature="e#2161#2162#0" expanded="true" />
+            <element signature="e#2230#2231#0" expanded="true" />
+            <element signature="e#2282#2283#0" expanded="true" />
+            <element signature="e#2351#2352#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/controller/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="13" lean-forward="true" selection-end-line="81" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1128#1129#0" expanded="true" />
+            <element signature="e#1174#1175#0" expanded="true" />
+            <element signature="e#1231#1232#0" expanded="true" />
+            <element signature="e#1280#1281#0" expanded="true" />
+            <element signature="e#1345#1346#0" expanded="true" />
+            <element signature="e#1394#1395#0" expanded="true" />
+            <element signature="e#1458#1459#0" expanded="true" />
+            <element signature="e#1510#1511#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/mybatis-generator.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="50" column="43" lean-forward="true" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/hebeu/graduatefeedback/test/AutoCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="32" column="40" lean-forward="true" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/pojo/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/service/StudentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/controller/StudentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="34" column="43" lean-forward="true" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
+          <folding>
+            <element signature="e#1147#1148#0" expanded="true" />
+            <element signature="e#1197#1198#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/service/impl/StudentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="61" column="37" lean-forward="true" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
+          <folding>
+            <element signature="e#2413#2414#0" expanded="true" />
+            <element signature="e#2486#2487#0" expanded="true" />
+            <element signature="e#2542#2543#0" expanded="true" />
+            <element signature="e#2615#2616#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
