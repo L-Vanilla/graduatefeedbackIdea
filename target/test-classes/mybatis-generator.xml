@@ -46,7 +46,9 @@
         </javaClientGenerator>
         <!-- 指定数据库表 -->
         <!--//管理员管理-->
-        <table tableName="admin"></table>
+        <!--<table tableName="admin"></table> -->
+        <!--//学生管理-->
+        <table tableName="student"></table>
 
         <!-- 有些表的字段需要指定java类型
          <table schema="" tableName="">

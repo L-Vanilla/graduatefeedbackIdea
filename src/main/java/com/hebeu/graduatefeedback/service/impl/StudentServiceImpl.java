@@ -68,7 +68,6 @@ public class StudentServiceImpl implements StudentService {
             student.setCreateDate(new Date());
             return StudentMapper.insertSelective(student);
         }
-
     }
 
     @Override
