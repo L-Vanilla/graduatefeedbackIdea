@@ -48,7 +48,9 @@
         <!--//管理员管理-->
         <!--<table tableName="admin"></table> -->
         <!--//学生管理-->
-        <table tableName="student"></table>
+        <!--<table tableName="student"></table>-->
+        <!--//单选题-->
+        <table tableName="bank_single_choice_que"></table>
 
         <!-- 有些表的字段需要指定java类型
          <table schema="" tableName="">

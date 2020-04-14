@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hebeu.graduatefeedback.dao.BankSingleChoiceQueMapper">
+  <resultMap id="BaseResultMap" type="com.hebeu.graduatefeedback.pojo.BankSingleChoiceQue">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="single_content" jdbcType="VARCHAR" property="singleContent" />
+    <result column="choice_A" jdbcType="VARCHAR" property="choiceA" />
+    <result column="choice_B" jdbcType="VARCHAR" property="choiceB" />
+    <result column="choice_C" jdbcType="VARCHAR" property="choiceC" />
+    <result column="choice_D" jdbcType="VARCHAR" property="choiceD" />
+    <result column="choice_E" jdbcType="VARCHAR" property="choiceE" />
+    <result column="choice_F" jdbcType="VARCHAR" property="choiceF" />
+    <result column="choice_G" jdbcType="VARCHAR" property="choiceG" />
+    <result column="singe_type" jdbcType="VARCHAR" property="singeType" />
+    <result column="create_date" jdbcType="TIMESTAMP" property="createDate" />
+    <result column="active" jdbcType="INTEGER" property="active" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, single_content, choice_A, choice_B, choice_C, choice_D, choice_E, choice_F, choice_G, 
+    singe_type, create_date, active
+  </sql>
+  <select id="selectByExample" parameterType="com.hebeu.graduatefeedback.pojo.BankSingleChoiceQueExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from bank_single_choice_que
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from bank_single_choice_que
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from bank_single_choice_que
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.hebeu.graduatefeedback.pojo.BankSingleChoiceQueExample">
+    delete from bank_single_choice_que
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.hebeu.graduatefeedback.pojo.BankSingleChoiceQue">
+    insert into bank_single_choice_que (id, single_content, choice_A, 
+      choice_B, choice_C, choice_D, 
+      choice_E, choice_F, choice_G, 
+      singe_type, create_date, active
+      )
+    values (#{id,jdbcType=INTEGER}, #{singleContent,jdbcType=VARCHAR}, #{choiceA,jdbcType=VARCHAR}, 
+      #{choiceB,jdbcType=VARCHAR}, #{choiceC,jdbcType=VARCHAR}, #{choiceD,jdbcType=VARCHAR}, 
+      #{choiceE,jdbcType=VARCHAR}, #{choiceF,jdbcType=VARCHAR}, #{choiceG,jdbcType=VARCHAR}, 
+      #{singeType,jdbcType=VARCHAR}, #{createDate,jdbcType=TIMESTAMP}, #{active,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.hebeu.graduatefeedback.pojo.BankSingleChoiceQue">
+    insert into bank_single_choice_que
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="singleContent != null">
+        single_content,
+      </if>
+      <if test="choiceA != null">
+        choice_A,
+      </if>
+      <if test="choiceB != null">
+        choice_B,
+      </if>
+      <if test="choiceC != null">
+        choice_C,
+      </if>
+      <if test="choiceD != null">
+        choice_D,
+      </if>
+      <if test="choiceE != null">
+        choice_E,
+      </if>
+      <if test="choiceF != null">
+        choice_F,
+      </if>
+      <if test="choiceG != null">
+        choice_G,
+      </if>
+      <if test="singeType != null">
+        singe_type,
+      </if>
+      <if test="createDate != null">
+        create_date,
+      </if>
+      <if test="active != null">
+        active,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="singleContent != null">
+        #{singleContent,jdbcType=VARCHAR},
+      </if>
+      <if test="choiceA != null">
+        #{choiceA,jdbcType=VARCHAR},
+      </if>
+      <if test="choiceB != null">
+        #{choiceB,jdbcType=VARCHAR},
+      </if>
+      <if test="choiceC != null">
+        #{choiceC,jdbcType=VARCHAR},
+      </if>
+      <if test="choiceD != null">
+        #{choiceD,jdbcType=VARCHAR},
+      </if>
+      <if test="choiceE != null">
+        #{choiceE,jdbcType=VARCHAR},
+      </if>
+      <if test="choiceF != null">
+        #{choiceF,jdbcType=VARCHAR},
+      </if>
+      <if test="choiceG != null">
+        #{choiceG,jdbcType=VARCHAR},
+      </if>
+      <if test="singeType != null">
+        #{singeType,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null">
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="active != null">
+        #{active,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.hebeu.graduatefeedback.pojo.BankSingleChoiceQueExample" resultType="java.lang.Long">
+    select count(*) from bank_single_choice_que
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update bank_single_choice_que
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.singleContent != null">
+        single_content = #{record.singleContent,jdbcType=VARCHAR},
+      </if>
+      <if test="record.choiceA != null">
+        choice_A = #{record.choiceA,jdbcType=VARCHAR},
+      </if>
+      <if test="record.choiceB != null">
+        choice_B = #{record.choiceB,jdbcType=VARCHAR},
+      </if>
+      <if test="record.choiceC != null">
+        choice_C = #{record.choiceC,jdbcType=VARCHAR},
+      </if>
+      <if test="record.choiceD != null">
+        choice_D = #{record.choiceD,jdbcType=VARCHAR},
+      </if>
+      <if test="record.choiceE != null">
+        choice_E = #{record.choiceE,jdbcType=VARCHAR},
+      </if>
+      <if test="record.choiceF != null">
+        choice_F = #{record.choiceF,jdbcType=VARCHAR},
+      </if>
+      <if test="record.choiceG != null">
+        choice_G = #{record.choiceG,jdbcType=VARCHAR},
+      </if>
+      <if test="record.singeType != null">
+        singe_type = #{record.singeType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createDate != null">
+        create_date = #{record.createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.active != null">
+        active = #{record.active,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update bank_single_choice_que
+    set id = #{record.id,jdbcType=INTEGER},
+      single_content = #{record.singleContent,jdbcType=VARCHAR},
+      choice_A = #{record.choiceA,jdbcType=VARCHAR},
+      choice_B = #{record.choiceB,jdbcType=VARCHAR},
+      choice_C = #{record.choiceC,jdbcType=VARCHAR},
+      choice_D = #{record.choiceD,jdbcType=VARCHAR},
+      choice_E = #{record.choiceE,jdbcType=VARCHAR},
+      choice_F = #{record.choiceF,jdbcType=VARCHAR},
+      choice_G = #{record.choiceG,jdbcType=VARCHAR},
+      singe_type = #{record.singeType,jdbcType=VARCHAR},
+      create_date = #{record.createDate,jdbcType=TIMESTAMP},
+      active = #{record.active,jdbcType=INTEGER}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.hebeu.graduatefeedback.pojo.BankSingleChoiceQue">
+    update bank_single_choice_que
+    <set>
+      <if test="singleContent != null">
+        single_content = #{singleContent,jdbcType=VARCHAR},
+      </if>
+      <if test="choiceA != null">
+        choice_A = #{choiceA,jdbcType=VARCHAR},
+      </if>
+      <if test="choiceB != null">
+        choice_B = #{choiceB,jdbcType=VARCHAR},
+      </if>
+      <if test="choiceC != null">
+        choice_C = #{choiceC,jdbcType=VARCHAR},
+      </if>
+      <if test="choiceD != null">
+        choice_D = #{choiceD,jdbcType=VARCHAR},
+      </if>
+      <if test="choiceE != null">
+        choice_E = #{choiceE,jdbcType=VARCHAR},
+      </if>
+      <if test="choiceF != null">
+        choice_F = #{choiceF,jdbcType=VARCHAR},
+      </if>
+      <if test="choiceG != null">
+        choice_G = #{choiceG,jdbcType=VARCHAR},
+      </if>
+      <if test="singeType != null">
+        singe_type = #{singeType,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null">
+        create_date = #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="active != null">
+        active = #{active,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.hebeu.graduatefeedback.pojo.BankSingleChoiceQue">
+    update bank_single_choice_que
+    set single_content = #{singleContent,jdbcType=VARCHAR},
+      choice_A = #{choiceA,jdbcType=VARCHAR},
+      choice_B = #{choiceB,jdbcType=VARCHAR},
+      choice_C = #{choiceC,jdbcType=VARCHAR},
+      choice_D = #{choiceD,jdbcType=VARCHAR},
+      choice_E = #{choiceE,jdbcType=VARCHAR},
+      choice_F = #{choiceF,jdbcType=VARCHAR},
+      choice_G = #{choiceG,jdbcType=VARCHAR},
+      singe_type = #{singeType,jdbcType=VARCHAR},
+      create_date = #{createDate,jdbcType=TIMESTAMP},
+      active = #{active,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
