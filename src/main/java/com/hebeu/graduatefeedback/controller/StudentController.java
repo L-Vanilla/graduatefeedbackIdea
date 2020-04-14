@@ -27,10 +27,15 @@ public class StudentController {
     @RequestMapping(value = "/insertStudentInfoList",method = RequestMethod.POST)
     public ServerResponse insertStudentInfoList(@RequestBody Map<String, Object> obj){
         System.out.println("学生导入");
-        List<Map<String, Object>> studentList = (List<Map<String, Object>>) obj.get("studentList");
-        Map<String, Object> result = StudentService.insertStudentInfoList(studentList);
+        try{
+            List<Map<String, Object>> studentList = (List<Map<String, Object>>) obj.get("studentList");
+            Map<String, Object> result = StudentService.insertStudentInfoList(studentList);
 
-        return ServerResponse.createBySuccess("文件上传成功",result);
+            return ServerResponse.createBySuccess("文件上传成功",result);
+        }catch(Exception e){
+            return ServerResponse.createByError("上传失败!请按照模板上传！");
+        }
+
     }
 
     @GetMapping("/list")

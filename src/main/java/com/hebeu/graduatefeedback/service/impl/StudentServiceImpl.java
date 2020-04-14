@@ -30,12 +30,27 @@ public class StudentServiceImpl implements StudentService {
             Map<String, Object> responseStudent = new HashMap<>();
             Integer id = Integer.parseInt(studentSingle.get("id").toString());
             String name = (String) studentSingle.get("name");
-            String college = (String) studentSingle.get("college");
-            String specialty = (String) studentSingle.get("specialty");
+            Integer sex;
+            if ( studentSingle.get("sex").equals('男')){
+                sex=0;
+            }else {
+                sex=1;
+            }
+            String sex1 = String.valueOf(studentSingle.get("sex"));
+            String college = String.valueOf(studentSingle.get("college"));
+            String specialty = String.valueOf(studentSingle.get("specialty"));
+            String grade = String.valueOf(studentSingle.get("grade"));
+            String mail = String.valueOf(studentSingle.get("mail"));
+            String phone = String.valueOf(studentSingle.get("phone"));
+
             responseStudent.put("学号", id);
             responseStudent.put("姓名", name);
+            responseStudent.put("性别",sex1);
             responseStudent.put("学院", college);
             responseStudent.put("专业", specialty);
+            responseStudent.put("班级", grade);
+            responseStudent.put("邮箱", mail);
+            responseStudent.put("手机号", phone);
             /*判断是否存在此学生*/
             Student stu = StudentMapper.selectByPrimaryKey(id);
             if (stu!=null) {
@@ -46,8 +61,13 @@ public class StudentServiceImpl implements StudentService {
                 Student student = new Student();
                 student.setId(id);
                 student.setName(name);
+                student.setSex(sex);
                 student.setCollege(college);
                 student.setSpecialty(specialty);
+                student.setGrade(grade);
+                student.setMail(mail);
+                student.setPhone(phone);
+                student.setCreateDate(new Date());
                 int insertResult = StudentMapper.insertSelective(student);
             }
             responseList.add(responseStudent);
