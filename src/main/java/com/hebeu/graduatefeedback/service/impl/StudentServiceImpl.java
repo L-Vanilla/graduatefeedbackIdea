@@ -9,8 +9,7 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 /*学生管理
  * 4-12Vanilla
@@ -20,6 +19,45 @@ import java.util.List;
 public class StudentServiceImpl implements StudentService {
     @Resource
     com.hebeu.graduatefeedback.dao.StudentMapper StudentMapper;
+    /*4-13学生信息的批量导入*/
+    @Override
+    public Map<String, Object> insertStudentInfoList(List<Map<String, Object>> studentList) {
+        Map<String, Object> map = new HashMap<>();
+        List<Map<String, Object>> responseList = new ArrayList<>();
+        int successItemCount = 0;
+        System.out.println("学生列表"+studentList.size());
+        for (Map<String, Object> studentSingle : studentList){
+            Map<String, Object> responseStudent = new HashMap<>();
+            Integer id = Integer.parseInt(studentSingle.get("id").toString());
+            String name = (String) studentSingle.get("name");
+            String college = (String) studentSingle.get("college");
+            String specialty = (String) studentSingle.get("specialty");
+            responseStudent.put("学号", id);
+            responseStudent.put("姓名", name);
+            responseStudent.put("学院", college);
+            responseStudent.put("专业", specialty);
+            /*判断是否存在此学生*/
+            Student stu = StudentMapper.selectByPrimaryKey(id);
+            if (stu!=null) {
+                responseStudent.put("上传状态", "失败，该学号已被注册");
+            } else {
+                responseStudent.put("上传状态", "成功");
+                successItemCount++;
+                Student student = new Student();
+                student.setId(id);
+                student.setName(name);
+                student.setCollege(college);
+                student.setSpecialty(specialty);
+                int insertResult = StudentMapper.insertSelective(student);
+            }
+            responseList.add(responseStudent);
+        }
+        map.put("responseList", responseList);
+        map.put("allItemCount", studentList.size());
+        map.put("successItemCount", successItemCount);
+        map.put("failItemCount", studentList.size() - successItemCount);
+        return map;
+    }
     @Override
     public List<Student> getStudents(Student student) {
 
@@ -79,6 +117,8 @@ public class StudentServiceImpl implements StudentService {
     public int update(Student student) {
         return StudentMapper.updateByPrimaryKeySelective(student);
     }
+
+
 //    /*19-12-29用户登录*/
 //    public Student getByNameAndPwd(String name, String password) {
 //        return StudentMapper.selectByNameAndPwd(name,password);

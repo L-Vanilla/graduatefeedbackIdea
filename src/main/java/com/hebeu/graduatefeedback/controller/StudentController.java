@@ -12,6 +12,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
+import java.util.Map;
 
 /*管理员
  * 4-10Vanilla
@@ -21,6 +22,17 @@ import java.util.List;
 public class StudentController {
     @Resource
     com.hebeu.graduatefeedback.service.StudentService StudentService;
+
+    /*导入excel学生信息*/
+    @RequestMapping(value = "/insertStudentInfoList",method = RequestMethod.POST)
+    public ServerResponse insertStudentInfoList(@RequestBody Map<String, Object> obj){
+        System.out.println("学生导入");
+        List<Map<String, Object>> studentList = (List<Map<String, Object>>) obj.get("studentList");
+        Map<String, Object> result = StudentService.insertStudentInfoList(studentList);
+
+        return ServerResponse.createBySuccess("文件上传成功",result);
+    }
+
     @GetMapping("/list")
     public ServerResponse getStudent(Student student){
         List<Student> students =StudentService.getStudents(student);
