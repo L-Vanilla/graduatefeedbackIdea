@@ -2,10 +2,10 @@ package com.hebeu.graduatefeedback.pojo;
 
 import java.util.Date;
 
-public class BankSingleChoiceQue extends MyPage {
+public class BankMultipleChoiceQue extends MyPage{
     private Integer id;
 
-    private String singleContent;
+    private String multipleContent;
 
     private String choiceA;
 
@@ -21,11 +21,9 @@ public class BankSingleChoiceQue extends MyPage {
 
     private String choiceG;
 
-    private String singeType;
+    private String multipleType;
 
     private Date createDate;
-
-    private Integer queType;
 
     private Integer active;
 
@@ -37,12 +35,12 @@ public class BankSingleChoiceQue extends MyPage {
         this.id = id;
     }
 
-    public String getSingleContent() {
-        return singleContent;
+    public String getMultipleContent() {
+        return multipleContent;
     }
 
-    public void setSingleContent(String singleContent) {
-        this.singleContent = singleContent == null ? null : singleContent.trim();
+    public void setMultipleContent(String multipleContent) {
+        this.multipleContent = multipleContent == null ? null : multipleContent.trim();
     }
 
     public String getChoiceA() {
@@ -101,12 +99,12 @@ public class BankSingleChoiceQue extends MyPage {
         this.choiceG = choiceG == null ? null : choiceG.trim();
     }
 
-    public String getSingeType() {
-        return singeType;
+    public String getMultipleType() {
+        return multipleType;
     }
 
-    public void setSingeType(String singeType) {
-        this.singeType = singeType == null ? null : singeType.trim();
+    public void setMultipleType(String multipleType) {
+        this.multipleType = multipleType == null ? null : multipleType.trim();
     }
 
     public Date getCreateDate() {
@@ -115,14 +113,6 @@ public class BankSingleChoiceQue extends MyPage {
 
     public void setCreateDate(Date createDate) {
         this.createDate = createDate;
-    }
-
-    public Integer getQueType() {
-        return queType;
-    }
-
-    public void setQueType(Integer queType) {
-        this.queType = queType;
     }
 
     public Integer getActive() {

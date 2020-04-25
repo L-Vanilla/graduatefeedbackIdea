@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class BankSingleChoiceQueExample {
+public class BankMultipleChoiceQueExample {
     protected String orderByClause;
 
     protected boolean distinct;
 
     protected List<Criteria> oredCriteria;
 
-    public BankSingleChoiceQueExample() {
+    public BankMultipleChoiceQueExample() {
         oredCriteria = new ArrayList<Criteria>();
     }
 
@@ -165,73 +165,73 @@ public class BankSingleChoiceQueExample {
             return (Criteria) this;
         }
 
-        public Criteria andSingleContentIsNull() {
-            addCriterion("single_content is null");
+        public Criteria andMultipleContentIsNull() {
+            addCriterion("multiple_content is null");
             return (Criteria) this;
         }
 
-        public Criteria andSingleContentIsNotNull() {
-            addCriterion("single_content is not null");
+        public Criteria andMultipleContentIsNotNull() {
+            addCriterion("multiple_content is not null");
             return (Criteria) this;
         }
 
-        public Criteria andSingleContentEqualTo(String value) {
-            addCriterion("single_content =", value, "singleContent");
+        public Criteria andMultipleContentEqualTo(String value) {
+            addCriterion("multiple_content =", value, "multipleContent");
             return (Criteria) this;
         }
 
-        public Criteria andSingleContentNotEqualTo(String value) {
-            addCriterion("single_content <>", value, "singleContent");
+        public Criteria andMultipleContentNotEqualTo(String value) {
+            addCriterion("multiple_content <>", value, "multipleContent");
             return (Criteria) this;
         }
 
-        public Criteria andSingleContentGreaterThan(String value) {
-            addCriterion("single_content >", value, "singleContent");
+        public Criteria andMultipleContentGreaterThan(String value) {
+            addCriterion("multiple_content >", value, "multipleContent");
             return (Criteria) this;
         }
 
-        public Criteria andSingleContentGreaterThanOrEqualTo(String value) {
-            addCriterion("single_content >=", value, "singleContent");
+        public Criteria andMultipleContentGreaterThanOrEqualTo(String value) {
+            addCriterion("multiple_content >=", value, "multipleContent");
             return (Criteria) this;
         }
 
-        public Criteria andSingleContentLessThan(String value) {
-            addCriterion("single_content <", value, "singleContent");
+        public Criteria andMultipleContentLessThan(String value) {
+            addCriterion("multiple_content <", value, "multipleContent");
             return (Criteria) this;
         }
 
-        public Criteria andSingleContentLessThanOrEqualTo(String value) {
-            addCriterion("single_content <=", value, "singleContent");
+        public Criteria andMultipleContentLessThanOrEqualTo(String value) {
+            addCriterion("multiple_content <=", value, "multipleContent");
             return (Criteria) this;
         }
 
-        public Criteria andSingleContentLike(String value) {
-            addCriterion("single_content like", value, "singleContent");
+        public Criteria andMultipleContentLike(String value) {
+            addCriterion("multiple_content like", value, "multipleContent");
             return (Criteria) this;
         }
 
-        public Criteria andSingleContentNotLike(String value) {
-            addCriterion("single_content not like", value, "singleContent");
+        public Criteria andMultipleContentNotLike(String value) {
+            addCriterion("multiple_content not like", value, "multipleContent");
             return (Criteria) this;
         }
 
-        public Criteria andSingleContentIn(List<String> values) {
-            addCriterion("single_content in", values, "singleContent");
+        public Criteria andMultipleContentIn(List<String> values) {
+            addCriterion("multiple_content in", values, "multipleContent");
             return (Criteria) this;
         }
 
-        public Criteria andSingleContentNotIn(List<String> values) {
-            addCriterion("single_content not in", values, "singleContent");
+        public Criteria andMultipleContentNotIn(List<String> values) {
+            addCriterion("multiple_content not in", values, "multipleContent");
             return (Criteria) this;
         }
 
-        public Criteria andSingleContentBetween(String value1, String value2) {
-            addCriterion("single_content between", value1, value2, "singleContent");
+        public Criteria andMultipleContentBetween(String value1, String value2) {
+            addCriterion("multiple_content between", value1, value2, "multipleContent");
             return (Criteria) this;
         }
 
-        public Criteria andSingleContentNotBetween(String value1, String value2) {
-            addCriterion("single_content not between", value1, value2, "singleContent");
+        public Criteria andMultipleContentNotBetween(String value1, String value2) {
+            addCriterion("multiple_content not between", value1, value2, "multipleContent");
             return (Criteria) this;
         }
 
@@ -725,73 +725,73 @@ public class BankSingleChoiceQueExample {
             return (Criteria) this;
         }
 
-        public Criteria andSingeTypeIsNull() {
-            addCriterion("singe_type is null");
+        public Criteria andMultipleTypeIsNull() {
+            addCriterion("multiple_type is null");
             return (Criteria) this;
         }
 
-        public Criteria andSingeTypeIsNotNull() {
-            addCriterion("singe_type is not null");
+        public Criteria andMultipleTypeIsNotNull() {
+            addCriterion("multiple_type is not null");
             return (Criteria) this;
         }
 
-        public Criteria andSingeTypeEqualTo(String value) {
-            addCriterion("singe_type =", value, "singeType");
+        public Criteria andMultipleTypeEqualTo(String value) {
+            addCriterion("multiple_type =", value, "multipleType");
             return (Criteria) this;
         }
 
-        public Criteria andSingeTypeNotEqualTo(String value) {
-            addCriterion("singe_type <>", value, "singeType");
+        public Criteria andMultipleTypeNotEqualTo(String value) {
+            addCriterion("multiple_type <>", value, "multipleType");
             return (Criteria) this;
         }
 
-        public Criteria andSingeTypeGreaterThan(String value) {
-            addCriterion("singe_type >", value, "singeType");
+        public Criteria andMultipleTypeGreaterThan(String value) {
+            addCriterion("multiple_type >", value, "multipleType");
             return (Criteria) this;
         }
 
-        public Criteria andSingeTypeGreaterThanOrEqualTo(String value) {
-            addCriterion("singe_type >=", value, "singeType");
+        public Criteria andMultipleTypeGreaterThanOrEqualTo(String value) {
+            addCriterion("multiple_type >=", value, "multipleType");
             return (Criteria) this;
         }
 
-        public Criteria andSingeTypeLessThan(String value) {
-            addCriterion("singe_type <", value, "singeType");
+        public Criteria andMultipleTypeLessThan(String value) {
+            addCriterion("multiple_type <", value, "multipleType");
             return (Criteria) this;
         }
 
-        public Criteria andSingeTypeLessThanOrEqualTo(String value) {
-            addCriterion("singe_type <=", value, "singeType");
+        public Criteria andMultipleTypeLessThanOrEqualTo(String value) {
+            addCriterion("multiple_type <=", value, "multipleType");
             return (Criteria) this;
         }
 
-        public Criteria andSingeTypeLike(String value) {
-            addCriterion("singe_type like", value, "singeType");
+        public Criteria andMultipleTypeLike(String value) {
+            addCriterion("multiple_type like", value, "multipleType");
             return (Criteria) this;
         }
 
-        public Criteria andSingeTypeNotLike(String value) {
-            addCriterion("singe_type not like", value, "singeType");
+        public Criteria andMultipleTypeNotLike(String value) {
+            addCriterion("multiple_type not like", value, "multipleType");
             return (Criteria) this;
         }
 
-        public Criteria andSingeTypeIn(List<String> values) {
-            addCriterion("singe_type in", values, "singeType");
+        public Criteria andMultipleTypeIn(List<String> values) {
+            addCriterion("multiple_type in", values, "multipleType");
             return (Criteria) this;
         }
 
-        public Criteria andSingeTypeNotIn(List<String> values) {
-            addCriterion("singe_type not in", values, "singeType");
+        public Criteria andMultipleTypeNotIn(List<String> values) {
+            addCriterion("multiple_type not in", values, "multipleType");
             return (Criteria) this;
         }
 
-        public Criteria andSingeTypeBetween(String value1, String value2) {
-            addCriterion("singe_type between", value1, value2, "singeType");
+        public Criteria andMultipleTypeBetween(String value1, String value2) {
+            addCriterion("multiple_type between", value1, value2, "multipleType");
             return (Criteria) this;
         }
 
-        public Criteria andSingeTypeNotBetween(String value1, String value2) {
-            addCriterion("singe_type not between", value1, value2, "singeType");
+        public Criteria andMultipleTypeNotBetween(String value1, String value2) {
+            addCriterion("multiple_type not between", value1, value2, "multipleType");
             return (Criteria) this;
         }
 
@@ -852,66 +852,6 @@ public class BankSingleChoiceQueExample {
 
         public Criteria andCreateDateNotBetween(Date value1, Date value2) {
             addCriterion("create_date not between", value1, value2, "createDate");
-            return (Criteria) this;
-        }
-
-        public Criteria andQueTypeIsNull() {
-            addCriterion("que_type is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andQueTypeIsNotNull() {
-            addCriterion("que_type is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andQueTypeEqualTo(Integer value) {
-            addCriterion("que_type =", value, "queType");
-            return (Criteria) this;
-        }
-
-        public Criteria andQueTypeNotEqualTo(Integer value) {
-            addCriterion("que_type <>", value, "queType");
-            return (Criteria) this;
-        }
-
-        public Criteria andQueTypeGreaterThan(Integer value) {
-            addCriterion("que_type >", value, "queType");
-            return (Criteria) this;
-        }
-
-        public Criteria andQueTypeGreaterThanOrEqualTo(Integer value) {
-            addCriterion("que_type >=", value, "queType");
-            return (Criteria) this;
-        }
-
-        public Criteria andQueTypeLessThan(Integer value) {
-            addCriterion("que_type <", value, "queType");
-            return (Criteria) this;
-        }
-
-        public Criteria andQueTypeLessThanOrEqualTo(Integer value) {
-            addCriterion("que_type <=", value, "queType");
-            return (Criteria) this;
-        }
-
-        public Criteria andQueTypeIn(List<Integer> values) {
-            addCriterion("que_type in", values, "queType");
-            return (Criteria) this;
-        }
-
-        public Criteria andQueTypeNotIn(List<Integer> values) {
-            addCriterion("que_type not in", values, "queType");
-            return (Criteria) this;
-        }
-
-        public Criteria andQueTypeBetween(Integer value1, Integer value2) {
-            addCriterion("que_type between", value1, value2, "queType");
-            return (Criteria) this;
-        }
-
-        public Criteria andQueTypeNotBetween(Integer value1, Integer value2) {
-            addCriterion("que_type not between", value1, value2, "queType");
             return (Criteria) this;
         }
 

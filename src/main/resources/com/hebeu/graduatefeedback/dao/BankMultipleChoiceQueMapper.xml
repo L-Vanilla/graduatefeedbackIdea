@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.hebeu.graduatefeedback.dao.BankSingleChoiceQueMapper">
-  <resultMap id="BaseResultMap" type="com.hebeu.graduatefeedback.pojo.BankSingleChoiceQue">
+<mapper namespace="com.hebeu.graduatefeedback.dao.BankMultipleChoiceQueMapper">
+  <resultMap id="BaseResultMap" type="com.hebeu.graduatefeedback.pojo.BankMultipleChoiceQue">
     <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="single_content" jdbcType="VARCHAR" property="singleContent" />
+    <result column="multiple_content" jdbcType="VARCHAR" property="multipleContent" />
     <result column="choice_A" jdbcType="VARCHAR" property="choiceA" />
     <result column="choice_B" jdbcType="VARCHAR" property="choiceB" />
     <result column="choice_C" jdbcType="VARCHAR" property="choiceC" />
@@ -11,9 +11,8 @@
     <result column="choice_E" jdbcType="VARCHAR" property="choiceE" />
     <result column="choice_F" jdbcType="VARCHAR" property="choiceF" />
     <result column="choice_G" jdbcType="VARCHAR" property="choiceG" />
-    <result column="singe_type" jdbcType="VARCHAR" property="singeType" />
+    <result column="multiple_type" jdbcType="VARCHAR" property="multipleType" />
     <result column="create_date" jdbcType="TIMESTAMP" property="createDate" />
-    <result column="que_type" jdbcType="INTEGER" property="queType" />
     <result column="active" jdbcType="INTEGER" property="active" />
   </resultMap>
   <sql id="Example_Where_Clause">
@@ -75,16 +74,16 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, single_content, choice_A, choice_B, choice_C, choice_D, choice_E, choice_F, choice_G, 
-    singe_type, create_date, que_type, active
+    id, multiple_content, choice_A, choice_B, choice_C, choice_D, choice_E, choice_F, 
+    choice_G, multiple_type, create_date, active
   </sql>
-  <select id="selectByExample" parameterType="com.hebeu.graduatefeedback.pojo.BankSingleChoiceQueExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.hebeu.graduatefeedback.pojo.BankMultipleChoiceQueExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from bank_single_choice_que
+    from bank_multiple_choice_que
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
@@ -95,39 +94,39 @@
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from bank_single_choice_que
+    from bank_multiple_choice_que
     where id = #{id,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from bank_single_choice_que
+    delete from bank_multiple_choice_que
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.hebeu.graduatefeedback.pojo.BankSingleChoiceQueExample">
-    delete from bank_single_choice_que
+  <delete id="deleteByExample" parameterType="com.hebeu.graduatefeedback.pojo.BankMultipleChoiceQueExample">
+    delete from bank_multiple_choice_que
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.hebeu.graduatefeedback.pojo.BankSingleChoiceQue">
-    insert into bank_single_choice_que (id, single_content, choice_A, 
+  <insert id="insert" parameterType="com.hebeu.graduatefeedback.pojo.BankMultipleChoiceQue">
+    insert into bank_multiple_choice_que (id, multiple_content, choice_A, 
       choice_B, choice_C, choice_D, 
       choice_E, choice_F, choice_G, 
-      singe_type, create_date, que_type, 
-      active)
-    values (#{id,jdbcType=INTEGER}, #{singleContent,jdbcType=VARCHAR}, #{choiceA,jdbcType=VARCHAR}, 
+      multiple_type, create_date, active
+      )
+    values (#{id,jdbcType=INTEGER}, #{multipleContent,jdbcType=VARCHAR}, #{choiceA,jdbcType=VARCHAR}, 
       #{choiceB,jdbcType=VARCHAR}, #{choiceC,jdbcType=VARCHAR}, #{choiceD,jdbcType=VARCHAR}, 
       #{choiceE,jdbcType=VARCHAR}, #{choiceF,jdbcType=VARCHAR}, #{choiceG,jdbcType=VARCHAR}, 
-      #{singeType,jdbcType=VARCHAR}, #{createDate,jdbcType=TIMESTAMP}, #{queType,jdbcType=INTEGER}, 
-      #{active,jdbcType=INTEGER})
+      #{multipleType,jdbcType=VARCHAR}, #{createDate,jdbcType=TIMESTAMP}, #{active,jdbcType=INTEGER}
+      )
   </insert>
-  <insert id="insertSelective" parameterType="com.hebeu.graduatefeedback.pojo.BankSingleChoiceQue">
-    insert into bank_single_choice_que
+  <insert id="insertSelective" parameterType="com.hebeu.graduatefeedback.pojo.BankMultipleChoiceQue">
+    insert into bank_multiple_choice_que
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
         id,
       </if>
-      <if test="singleContent != null">
-        single_content,
+      <if test="multipleContent != null">
+        multiple_content,
       </if>
       <if test="choiceA != null">
         choice_A,
@@ -150,14 +149,11 @@
       <if test="choiceG != null">
         choice_G,
       </if>
-      <if test="singeType != null">
-        singe_type,
+      <if test="multipleType != null">
+        multiple_type,
       </if>
       <if test="createDate != null">
         create_date,
-      </if>
-      <if test="queType != null">
-        que_type,
       </if>
       <if test="active != null">
         active,
@@ -167,8 +163,8 @@
       <if test="id != null">
         #{id,jdbcType=INTEGER},
       </if>
-      <if test="singleContent != null">
-        #{singleContent,jdbcType=VARCHAR},
+      <if test="multipleContent != null">
+        #{multipleContent,jdbcType=VARCHAR},
       </if>
       <if test="choiceA != null">
         #{choiceA,jdbcType=VARCHAR},
@@ -191,34 +187,31 @@
       <if test="choiceG != null">
         #{choiceG,jdbcType=VARCHAR},
       </if>
-      <if test="singeType != null">
-        #{singeType,jdbcType=VARCHAR},
+      <if test="multipleType != null">
+        #{multipleType,jdbcType=VARCHAR},
       </if>
       <if test="createDate != null">
         #{createDate,jdbcType=TIMESTAMP},
-      </if>
-      <if test="queType != null">
-        #{queType,jdbcType=INTEGER},
       </if>
       <if test="active != null">
         #{active,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.hebeu.graduatefeedback.pojo.BankSingleChoiceQueExample" resultType="java.lang.Long">
-    select count(*) from bank_single_choice_que
+  <select id="countByExample" parameterType="com.hebeu.graduatefeedback.pojo.BankMultipleChoiceQueExample" resultType="java.lang.Long">
+    select count(*) from bank_multiple_choice_que
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map">
-    update bank_single_choice_que
+    update bank_multiple_choice_que
     <set>
       <if test="record.id != null">
         id = #{record.id,jdbcType=INTEGER},
       </if>
-      <if test="record.singleContent != null">
-        single_content = #{record.singleContent,jdbcType=VARCHAR},
+      <if test="record.multipleContent != null">
+        multiple_content = #{record.multipleContent,jdbcType=VARCHAR},
       </if>
       <if test="record.choiceA != null">
         choice_A = #{record.choiceA,jdbcType=VARCHAR},
@@ -241,14 +234,11 @@
       <if test="record.choiceG != null">
         choice_G = #{record.choiceG,jdbcType=VARCHAR},
       </if>
-      <if test="record.singeType != null">
-        singe_type = #{record.singeType,jdbcType=VARCHAR},
+      <if test="record.multipleType != null">
+        multiple_type = #{record.multipleType,jdbcType=VARCHAR},
       </if>
       <if test="record.createDate != null">
         create_date = #{record.createDate,jdbcType=TIMESTAMP},
-      </if>
-      <if test="record.queType != null">
-        que_type = #{record.queType,jdbcType=INTEGER},
       </if>
       <if test="record.active != null">
         active = #{record.active,jdbcType=INTEGER},
@@ -259,9 +249,9 @@
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
-    update bank_single_choice_que
+    update bank_multiple_choice_que
     set id = #{record.id,jdbcType=INTEGER},
-      single_content = #{record.singleContent,jdbcType=VARCHAR},
+      multiple_content = #{record.multipleContent,jdbcType=VARCHAR},
       choice_A = #{record.choiceA,jdbcType=VARCHAR},
       choice_B = #{record.choiceB,jdbcType=VARCHAR},
       choice_C = #{record.choiceC,jdbcType=VARCHAR},
@@ -269,19 +259,18 @@
       choice_E = #{record.choiceE,jdbcType=VARCHAR},
       choice_F = #{record.choiceF,jdbcType=VARCHAR},
       choice_G = #{record.choiceG,jdbcType=VARCHAR},
-      singe_type = #{record.singeType,jdbcType=VARCHAR},
+      multiple_type = #{record.multipleType,jdbcType=VARCHAR},
       create_date = #{record.createDate,jdbcType=TIMESTAMP},
-      que_type = #{record.queType,jdbcType=INTEGER},
       active = #{record.active,jdbcType=INTEGER}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.hebeu.graduatefeedback.pojo.BankSingleChoiceQue">
-    update bank_single_choice_que
+  <update id="updateByPrimaryKeySelective" parameterType="com.hebeu.graduatefeedback.pojo.BankMultipleChoiceQue">
+    update bank_multiple_choice_que
     <set>
-      <if test="singleContent != null">
-        single_content = #{singleContent,jdbcType=VARCHAR},
+      <if test="multipleContent != null">
+        multiple_content = #{multipleContent,jdbcType=VARCHAR},
       </if>
       <if test="choiceA != null">
         choice_A = #{choiceA,jdbcType=VARCHAR},
@@ -304,14 +293,11 @@
       <if test="choiceG != null">
         choice_G = #{choiceG,jdbcType=VARCHAR},
       </if>
-      <if test="singeType != null">
-        singe_type = #{singeType,jdbcType=VARCHAR},
+      <if test="multipleType != null">
+        multiple_type = #{multipleType,jdbcType=VARCHAR},
       </if>
       <if test="createDate != null">
         create_date = #{createDate,jdbcType=TIMESTAMP},
-      </if>
-      <if test="queType != null">
-        que_type = #{queType,jdbcType=INTEGER},
       </if>
       <if test="active != null">
         active = #{active,jdbcType=INTEGER},
@@ -319,9 +305,9 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.hebeu.graduatefeedback.pojo.BankSingleChoiceQue">
-    update bank_single_choice_que
-    set single_content = #{singleContent,jdbcType=VARCHAR},
+  <update id="updateByPrimaryKey" parameterType="com.hebeu.graduatefeedback.pojo.BankMultipleChoiceQue">
+    update bank_multiple_choice_que
+    set multiple_content = #{multipleContent,jdbcType=VARCHAR},
       choice_A = #{choiceA,jdbcType=VARCHAR},
       choice_B = #{choiceB,jdbcType=VARCHAR},
       choice_C = #{choiceC,jdbcType=VARCHAR},
@@ -329,9 +315,8 @@
       choice_E = #{choiceE,jdbcType=VARCHAR},
       choice_F = #{choiceF,jdbcType=VARCHAR},
       choice_G = #{choiceG,jdbcType=VARCHAR},
-      singe_type = #{singeType,jdbcType=VARCHAR},
+      multiple_type = #{multipleType,jdbcType=VARCHAR},
       create_date = #{createDate,jdbcType=TIMESTAMP},
-      que_type = #{queType,jdbcType=INTEGER},
       active = #{active,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>

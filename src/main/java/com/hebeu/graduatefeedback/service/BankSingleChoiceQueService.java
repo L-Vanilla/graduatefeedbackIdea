@@ -3,7 +3,6 @@ package com.hebeu.graduatefeedback.service;
 
 
 import com.hebeu.graduatefeedback.pojo.BankSingleChoiceQue;
-import com.hebeu.graduatefeedback.pojo.BankSingleChoiceQue;
 
 import java.util.List;
 import java.util.Map;
