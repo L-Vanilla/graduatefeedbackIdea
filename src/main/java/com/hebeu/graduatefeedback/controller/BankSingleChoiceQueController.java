@@ -75,7 +75,7 @@ public class BankSingleChoiceQueController {
             return ServerResponse.createByError("更新失败！");
     }
     @GetMapping("/getOne")
-    public ServerResponse getOne(Integer id){
+    public ServerResponse getOne(String id){
         BankSingleChoiceQue bankSingleChoiceQue = BankSingleChoiceQueService.getBankSingleChoiceQueById(id);
         return ServerResponse.createBySuccess("获取成功！",bankSingleChoiceQue);
     }

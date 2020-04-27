@@ -13,7 +13,7 @@ import java.util.Map;
 public interface BankSingleChoiceQueService {
     List<BankSingleChoiceQue> getBankSingleChoiceQues(BankSingleChoiceQue bankSingleChoiceQue);
     List<BankSingleChoiceQue> getAll(BankSingleChoiceQue bankSingleChoiceQue);
-    BankSingleChoiceQue getBankSingleChoiceQueById(int id);
+    BankSingleChoiceQue getBankSingleChoiceQueById(String id);
     int add(BankSingleChoiceQue bankSingleChoiceQue);
     int del(BankSingleChoiceQue bankSingleChoiceQue);
     //    int del(Integer id);

@@ -4,6 +4,7 @@ import com.github.pagehelper.PageHelper;
 import com.hebeu.graduatefeedback.pojo.BankSingleChoiceQue;
 import com.hebeu.graduatefeedback.pojo.BankSingleChoiceQueExample;
 import com.hebeu.graduatefeedback.service.BankSingleChoiceQueService;
+import com.hebeu.graduatefeedback.utils.UUIDUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
@@ -62,7 +63,7 @@ public class BankSingleChoiceQueServiceImpl implements BankSingleChoiceQueServic
                 responseBankSingleChoiceQue.put("上传状态", "成功");
                 successItemCount++;
                 BankSingleChoiceQue bankSingleChoiceQue = new BankSingleChoiceQue();
-//                bankSingleChoiceQue.setId(id);
+                bankSingleChoiceQue.setId(UUIDUtil.getUUID());
                 bankSingleChoiceQue.setSingleContent(singleContent);
                 bankSingleChoiceQue.setChoiceA(choiceA);
                 bankSingleChoiceQue.setChoiceB(choiceB);
@@ -117,7 +118,7 @@ public class BankSingleChoiceQueServiceImpl implements BankSingleChoiceQueServic
     }
 
     @Override
-    public BankSingleChoiceQue getBankSingleChoiceQueById(int id) {
+    public BankSingleChoiceQue getBankSingleChoiceQueById(String id) {
         return BankSingleChoiceQueMapper.selectByPrimaryKey(id);
     }
 
@@ -128,6 +129,9 @@ public class BankSingleChoiceQueServiceImpl implements BankSingleChoiceQueServic
 //        if(stu!=null){
 //            return 0;
 //        }else {
+
+        bankSingleChoiceQue.setId(UUIDUtil.getUUID());
+
         bankSingleChoiceQue.setCreateDate(new Date());
         return BankSingleChoiceQueMapper.insertSelective(bankSingleChoiceQue);
 //        }

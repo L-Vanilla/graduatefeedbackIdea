@@ -10,7 +10,7 @@ public interface BankSingleChoiceQueMapper {
 
     int deleteByExample(BankSingleChoiceQueExample example);
 
-    int deleteByPrimaryKey(Integer id);
+    int deleteByPrimaryKey(String id);
 
     int insert(BankSingleChoiceQue record);
 
@@ -18,7 +18,7 @@ public interface BankSingleChoiceQueMapper {
 
     List<BankSingleChoiceQue> selectByExample(BankSingleChoiceQueExample example);
 
-    BankSingleChoiceQue selectByPrimaryKey(Integer id);
+    BankSingleChoiceQue selectByPrimaryKey(String id);
 
     int updateByExampleSelective(@Param("record") BankSingleChoiceQue record, @Param("example") BankSingleChoiceQueExample example);
 

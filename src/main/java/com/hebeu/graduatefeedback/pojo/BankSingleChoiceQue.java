@@ -2,8 +2,8 @@ package com.hebeu.graduatefeedback.pojo;
 
 import java.util.Date;
 
-public class BankSingleChoiceQue extends MyPage {
-    private Integer id;
+public class BankSingleChoiceQue extends MyPage{
+    private String id;
 
     private String singleContent;
 
@@ -29,12 +29,12 @@ public class BankSingleChoiceQue extends MyPage {
 
     private Integer active;
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setId(String id) {
+        this.id = id == null ? null : id.trim();
     }
 
     public String getSingleContent() {
