@@ -18,6 +18,7 @@ public interface BankSingleChoiceQueService {
     int del(BankSingleChoiceQue bankSingleChoiceQue);
     //    int del(Integer id);
     int update(BankSingleChoiceQue bankSingleChoiceQue);
+   Map<String, Object> insertBankSingleChoiceQueList(Map<String, Object> obj);
     /*4-13学生信息的批量导入*/
     public Map<String, Object> insertBankSingleChoiceQueInfoList(List<Map<String, Object>> bankSingleChoiceQueList);
 //    /*19-12-29用户登录*/

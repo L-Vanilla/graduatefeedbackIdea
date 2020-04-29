@@ -32,6 +32,18 @@ public class BankSingleChoiceQueController {
 
     }
 
+    /*插入多条试卷条目*/
+    @RequestMapping(value = "/insertBankSingleChoiceQueList",method = RequestMethod.POST)
+    public ServerResponse insertBankSingleChoiceQueList(@RequestBody Map<String, Object> obj){
+//        System.out.println("学生导入");
+//            List<Map<String, Object>> bankSingleChoiceQueList = (List<Map<String, Object>>) obj.get("bankSingleChoiceQueList");
+//            String title= (String) obj.get("title");
+//            System.out.println("title"+title);
+            Map<String, Object> result = BankSingleChoiceQueService.insertBankSingleChoiceQueList(obj);
+            return ServerResponse.createBySuccess("发布成功！",result);
+
+    }
+
     @GetMapping("/list")
     public ServerResponse getBankSingleChoiceQue(BankSingleChoiceQue bankSingleChoiceQue){
         List<BankSingleChoiceQue> bankSingleChoiceQues =BankSingleChoiceQueService.getBankSingleChoiceQues(bankSingleChoiceQue);
@@ -79,6 +91,7 @@ public class BankSingleChoiceQueController {
         BankSingleChoiceQue bankSingleChoiceQue = BankSingleChoiceQueService.getBankSingleChoiceQueById(id);
         return ServerResponse.createBySuccess("获取成功！",bankSingleChoiceQue);
     }
+
 
 
 

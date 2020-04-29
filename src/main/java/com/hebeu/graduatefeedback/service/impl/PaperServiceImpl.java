@@ -33,7 +33,7 @@ public class PaperServiceImpl implements PaperService {
         else {
             criteria.andActiveEqualTo(1);
         }
-        PaperExample.setOrderByClause("id desc");
+        PaperExample.setOrderByClause("create_date desc");
 //        if(Paper.getActive()!=null)
 //            criteria.andActiveEqualTo(Paper.getActive());
 

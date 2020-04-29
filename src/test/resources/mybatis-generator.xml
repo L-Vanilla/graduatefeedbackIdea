@@ -53,6 +53,8 @@
         <!--<table tableName="bank_single_choice_que"></table>-->
         <!--//试卷管理-->
         <table tableName="paper"></table>
+        <!--//试卷条目管理-->
+        <!--<table tableName="paper_que"></table>-->
 
         <!-- 有些表的字段需要指定java类型
          <table schema="" tableName="">
