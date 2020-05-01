@@ -3,16 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="149db818-3f35-4b1b-962f-329b488d8a57" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/controller/BankSingleChoiceQueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/controller/BankSingleChoiceQueController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/dao/PaperMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/pojo/Paper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/pojo/PaperExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/service/BankSingleChoiceQueService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/service/BankSingleChoiceQueService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/service/impl/BankSingleChoiceQueServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/service/impl/BankSingleChoiceQueServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/service/impl/PaperServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/service/impl/PaperServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/hebeu/graduatefeedback/dao/PaperMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/mybatis-generator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/mybatis-generator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/mybatis-generator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/mybatis-generator.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -66,43 +57,44 @@
     <session id="-1496330732">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.40" value="1" />
           <entry key="project.open.time.41" value="1" />
           <entry key="project.open.time.42" value="1" />
           <entry key="project.open.time.43" value="1" />
-          <entry key="project.open.time.46" value="1" />
+          <entry key="project.open.time.46" value="2" />
           <entry key="project.open.time.51" value="1" />
           <entry key="project.open.time.52" value="1" />
           <entry key="project.open.time.62" value="1" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="iml" value="1" />
-          <entry key="java" value="148" />
+          <entry key="java" value="153" />
           <entry key="xml" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="148" />
+          <entry key="JAVA" value="153" />
           <entry key="XML" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2253" />
-          <entry key="txt" value="138" />
+          <entry key="java" value="2317" />
+          <entry key="txt" value="142" />
           <entry key="xml" value="126" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2253" />
-          <entry key="PLAIN_TEXT" value="138" />
+          <entry key="JAVA" value="2317" />
+          <entry key="PLAIN_TEXT" value="142" />
           <entry key="XML" value="126" />
         </counts>
       </usages-collector>
@@ -112,7 +104,65 @@
     <favorites_list name="graduatefeedback" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/service/impl/BankSingleChoiceQueServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-197">
+              <caret line="184" column="45" selection-start-line="184" selection-start-column="45" selection-end-line="184" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#insertBankSingleChoiceQueInfoList#0;class#BankSingleChoiceQueServiceImpl#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/controller/BankSingleChoiceQueController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="952">
+              <caret line="41" selection-start-line="41" selection-end-line="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/pojo/Paper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="812">
+              <caret line="32" column="7" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1594#1595#0" expanded="true" />
+                <element signature="e#1627#1628#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://D:/Java/jdk1.8.0_201/src.zip!/java/lang/NumberFormatException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1036">
+              <caret line="64" selection-start-line="64" selection-end-line="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/pojo/PaperQue.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="7" column="27" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -185,9 +235,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/controller/PaperQueController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/controller/BankSingleChoiceQueController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/pojo/Paper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/service/impl/BankSingleChoiceQueServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/service/impl/PaperServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/service/impl/PaperQueServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/service/impl/BankSingleChoiceQueServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -218,8 +268,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -328,6 +376,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -449,7 +499,9 @@
       <workItem from="1587804856258" duration="7020000" />
       <workItem from="1587887518758" duration="15773000" />
       <workItem from="1588083475116" duration="5291000" />
-      <workItem from="1588124995056" duration="1291000" />
+      <workItem from="1588124995056" duration="4176000" />
+      <workItem from="1588217908642" duration="2415000" />
+      <workItem from="1588318495186" duration="678000" />
     </task>
     <task id="LOCAL-00001" summary="添加管理员身份证字段">
       <created>1586698553005</created>
@@ -514,11 +566,18 @@
       <option name="project" value="LOCAL" />
       <updated>1587995066435</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="4-27完成问卷">
+      <created>1588174990044</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1588174990044</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94052000" />
+    <option name="totallyTimeSpent" value="100030000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -531,8 +590,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7917847" visible="true" weight="0.27882037" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7917847" visible="true" weight="0.28686327" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -543,7 +603,7 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.42553192" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49932975" visible="true" weight="0.022695035" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49932975" visible="true" weight="0.46524823" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.22978723" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -554,7 +614,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="10" weight="0.32907802" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.16170213" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.04822695" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -582,7 +642,8 @@
     <MESSAGE value="4-14单选题" />
     <MESSAGE value="4-25单选题添加题目类型字段" />
     <MESSAGE value="4-27修改id字段为字符串型" />
-    <option name="LAST_COMMIT_MESSAGE" value="4-27修改id字段为字符串型" />
+    <MESSAGE value="4-27完成问卷" />
+    <option name="LAST_COMMIT_MESSAGE" value="4-27完成问卷" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/test/resources/application.yml" />
@@ -656,9 +717,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
           <caret line="31" column="50" lean-forward="true" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -737,9 +795,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#480#481#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -820,9 +875,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="728">
           <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -840,23 +892,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/controller/BankSingleChoiceQueController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="61" column="23" lean-forward="true" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/pojo/Paper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="865">
-          <caret line="32" column="7" lean-forward="true" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/pojo/MyPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
@@ -868,16 +903,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="644">
           <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/pojo/PaperQue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -885,15 +910,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="28">
           <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2115#2116#0" expanded="true" />
-            <element signature="e#2175#2176#0" expanded="true" />
-            <element signature="e#2438#2439#0" expanded="true" />
-            <element signature="e#2513#2514#0" expanded="true" />
-            <element signature="e#2571#2572#0" expanded="true" />
-            <element signature="e#2646#2647#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -906,12 +922,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/service/impl/BankSingleChoiceQueServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="177" column="42" selection-start-line="177" selection-start-column="42" selection-end-line="177" selection-end-column="42" />
+        <state relative-caret-position="-197">
+          <caret line="184" column="45" selection-start-line="184" selection-start-column="45" selection-end-line="184" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#insertBankSingleChoiceQueInfoList#0;class#BankSingleChoiceQueServiceImpl#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/controller/BankSingleChoiceQueController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="952">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/pojo/Paper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="812">
+          <caret line="32" column="7" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1594#1595#0" expanded="true" />
+            <element signature="e#1627#1628#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/jdk1.8.0_201/src.zip!/java/lang/NumberFormatException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1036">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebeu/graduatefeedback/pojo/PaperQue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="27" />
         </state>
       </provider>
     </entry>

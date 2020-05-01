@@ -133,7 +133,11 @@ public class BankSingleChoiceQueServiceImpl implements BankSingleChoiceQueServic
             String choiceF = String.valueOf(bankSingleChoiceQueSingle.get("choiceF"));
             String choiceG = String.valueOf(bankSingleChoiceQueSingle.get("choiceG"));
             String singeType = String.valueOf(bankSingleChoiceQueSingle.get("singeType"));
-            Integer queType =  Integer.parseInt(bankSingleChoiceQueSingle.get("queType").toString());
+
+//            String Qt=String.valueOf(bankSingleChoiceQueSingle.get("queType"));
+
+            Integer queType = Integer.parseInt(bankSingleChoiceQueSingle.get("queType").toString());
+            System.out.println("queType"+queType);
 //            responseBankSingleChoiceQue.put("学号", id);
             responseBankSingleChoiceQue.put("题目内容", singleContent);
             responseBankSingleChoiceQue.put("选项A",choiceA);
