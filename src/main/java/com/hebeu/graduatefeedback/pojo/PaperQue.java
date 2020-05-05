@@ -1,8 +1,6 @@
 package com.hebeu.graduatefeedback.pojo;
 
-import java.util.Map;
-
-public class PaperQue extends MyPage {
+public class PaperQue extends MyPage{
     private String id;
 
     private Integer queType;
@@ -10,6 +8,8 @@ public class PaperQue extends MyPage {
     private String queId;
 
     private String paperId;
+
+    private Integer queNum;
 
     public String getId() {
         return id;
@@ -41,5 +41,13 @@ public class PaperQue extends MyPage {
 
     public void setPaperId(String paperId) {
         this.paperId = paperId == null ? null : paperId.trim();
+    }
+
+    public Integer getQueNum() {
+        return queNum;
+    }
+
+    public void setQueNum(Integer queNum) {
+        this.queNum = queNum;
     }
 }

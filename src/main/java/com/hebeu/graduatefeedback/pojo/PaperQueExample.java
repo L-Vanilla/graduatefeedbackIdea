@@ -373,6 +373,66 @@ public class PaperQueExample {
             addCriterion("paper_id not between", value1, value2, "paperId");
             return (Criteria) this;
         }
+
+        public Criteria andQueNumIsNull() {
+            addCriterion("que_num is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andQueNumIsNotNull() {
+            addCriterion("que_num is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andQueNumEqualTo(Integer value) {
+            addCriterion("que_num =", value, "queNum");
+            return (Criteria) this;
+        }
+
+        public Criteria andQueNumNotEqualTo(Integer value) {
+            addCriterion("que_num <>", value, "queNum");
+            return (Criteria) this;
+        }
+
+        public Criteria andQueNumGreaterThan(Integer value) {
+            addCriterion("que_num >", value, "queNum");
+            return (Criteria) this;
+        }
+
+        public Criteria andQueNumGreaterThanOrEqualTo(Integer value) {
+            addCriterion("que_num >=", value, "queNum");
+            return (Criteria) this;
+        }
+
+        public Criteria andQueNumLessThan(Integer value) {
+            addCriterion("que_num <", value, "queNum");
+            return (Criteria) this;
+        }
+
+        public Criteria andQueNumLessThanOrEqualTo(Integer value) {
+            addCriterion("que_num <=", value, "queNum");
+            return (Criteria) this;
+        }
+
+        public Criteria andQueNumIn(List<Integer> values) {
+            addCriterion("que_num in", values, "queNum");
+            return (Criteria) this;
+        }
+
+        public Criteria andQueNumNotIn(List<Integer> values) {
+            addCriterion("que_num not in", values, "queNum");
+            return (Criteria) this;
+        }
+
+        public Criteria andQueNumBetween(Integer value1, Integer value2) {
+            addCriterion("que_num between", value1, value2, "queNum");
+            return (Criteria) this;
+        }
+
+        public Criteria andQueNumNotBetween(Integer value1, Integer value2) {
+            addCriterion("que_num not between", value1, value2, "queNum");
+            return (Criteria) this;
+        }
     }
 
     public static class Criteria extends GeneratedCriteria {

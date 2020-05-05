@@ -8,7 +8,6 @@ import com.hebeu.graduatefeedback.pojo.PaperQue;
 import com.hebeu.graduatefeedback.service.BankSingleChoiceQueService;
 import com.hebeu.graduatefeedback.utils.UUIDUtil;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
@@ -100,6 +99,7 @@ public class BankSingleChoiceQueServiceImpl implements BankSingleChoiceQueServic
     @Override
     public Map<String, Object> insertBankSingleChoiceQueList(Map<String, Object> obj) {
         List<Map<String, Object>> bankSingleChoiceQueList = (List<Map<String, Object>>) obj.get("bankSingleChoiceQueList");
+        int que_num=1;/*题号*/
        /*试卷表的一些数据字段--------------0*/
 
         String paper_id= UUIDUtil.getUUID();
@@ -177,12 +177,15 @@ public class BankSingleChoiceQueServiceImpl implements BankSingleChoiceQueServic
                 System.out.println("result "+insertResult);
                 /*-插入BankSingleChoice条目表---------------1*/
                 /*插入试卷条目表----------0*/
+
                 PaperQue paperQue=new PaperQue();
                 paperQue.setId(UUIDUtil.getUUID());
                 paperQue.setQueId(que_id);
                 paperQue.setPaperId(paper_id);
                 paperQue.setQueType(queType);
+                paperQue.setQueNum(que_num);
                 paperQueMapper.insertSelective(paperQue);
+                que_num++;
                 /*插入试卷条目表----------1*/
                 responseBankSingleChoiceQue.put("上传状态", "成功");
             }
