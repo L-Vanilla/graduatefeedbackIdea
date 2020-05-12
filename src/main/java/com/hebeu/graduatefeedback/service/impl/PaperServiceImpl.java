@@ -1,8 +1,11 @@
 package com.hebeu.graduatefeedback.service.impl;
 
 import com.github.pagehelper.PageHelper;
+import com.hebeu.graduatefeedback.dao.PaperViewMapper;
 import com.hebeu.graduatefeedback.pojo.Paper;
 import com.hebeu.graduatefeedback.pojo.PaperExample;
+import com.hebeu.graduatefeedback.pojo.PaperView;
+import com.hebeu.graduatefeedback.pojo.PaperViewExample;
 import com.hebeu.graduatefeedback.service.PaperService;
 import com.hebeu.graduatefeedback.utils.UUIDUtil;
 import org.apache.commons.lang3.StringUtils;
@@ -20,7 +23,21 @@ import java.util.List;
 @Primary
 public class PaperServiceImpl implements PaperService {
     @Resource
-    com.hebeu.graduatefeedback.dao.PaperMapper PaperMapper;
+    com.hebeu.graduatefeedback.dao.PaperMapper PaperMapper;@Resource
+    com.hebeu.graduatefeedback.dao.PaperViewMapper PaperViewMapper;
+
+    /*根据paper_id获取所有试卷的条目信息*/
+    @Override
+    public List<PaperView> getPaperByPaperId(String paper_id) {
+        PaperViewExample paperViewExample = new PaperViewExample();
+        PaperViewExample.Criteria criteria = paperViewExample.createCriteria();
+//        System.out.println("用户名Service"+paper.getTitle());
+        if (StringUtils.isNotBlank(paper_id)) {
+            criteria.andPaperIdEqualTo(paper_id);
+        }
+        paperViewExample.setOrderByClause("que_num asc");
+        return PaperViewMapper.selectByExample(paperViewExample);
+    }
     @Override
     public List<Paper> getPapers(Paper paper) {
 
@@ -75,6 +92,8 @@ public class PaperServiceImpl implements PaperService {
     public int update(Paper paper) {
         return PaperMapper.updateByPrimaryKeySelective(paper);
     }
+
+
 //    /*19-12-29用户登录*/
 //    public Paper getByNameAndPwd(String name, String password) {
 //        return PaperMapper.selectByNameAndPwd(name,password);

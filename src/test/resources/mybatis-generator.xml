@@ -54,7 +54,11 @@
         <!--//试卷管理-->
         <!--<table tableName="paper"></table>-->
         <!--//试卷条目管理-->
-        <table tableName="paper_que"></table>
+        <!--<table tableName="paper_que"></table>-->
+        <!--//试卷视图-->
+        <!--<table tableName="paper_view"></table>-->
+        <!--//学生答案-->
+        <table tableName="paper_answer"></table>
 
         <!-- 有些表的字段需要指定java类型
          <table schema="" tableName="">
