@@ -1,6 +1,8 @@
 package com.hebeu.graduatefeedback.service.impl;
 
 import com.github.pagehelper.PageHelper;
+import com.hebeu.graduatefeedback.dao.PaperMapper;
+import com.hebeu.graduatefeedback.pojo.Paper;
 import com.hebeu.graduatefeedback.pojo.PaperAnswer;
 import com.hebeu.graduatefeedback.pojo.PaperAnswerExample;
 import com.hebeu.graduatefeedback.service.PaperAnswerService;
@@ -20,6 +22,8 @@ import java.util.*;
 public class PaperAnswerServiceImpl implements PaperAnswerService {
     @Resource
     com.hebeu.graduatefeedback.dao.PaperAnswerMapper PaperAnswerMapper;
+    @Resource
+    com.hebeu.graduatefeedback.dao.PaperMapper PaperMapper;
     @Override
     public List<PaperAnswer> getPaperAnswers(PaperAnswer paperAnswer) {
         PageHelper.startPage(paperAnswer.getPageNo(), paperAnswer.getPageSize());
@@ -60,14 +64,14 @@ public class PaperAnswerServiceImpl implements PaperAnswerService {
     @Override
     public Map<String, Object> insertPaperAnswerList(Map<String, Object> obj) {
         List<Map<String, Object>> PaperAnswerQueList = (List<Map<String, Object>>) obj.get("PaperAnswerQueList");
+        String paperId= (String) obj.get("paperId");
 
-//        System.out.println("title"+title);
+        System.out.println("paperId:"+paperId);
         Map<String, Object> map = new HashMap<>();
         List<Map<String, Object>> responseList = new ArrayList<>();
         for (Map<String, Object> PaperAnswerQue : PaperAnswerQueList){
             Map<String, Object> responsePaperAnswerQue = new HashMap<>();
 //            Integer id = Integer.parseInt(bankSingleChoiceQueSingle.get("id").toString());
-            String paperId = String.valueOf(PaperAnswerQue.get("paperId"));
             String answer = String.valueOf(PaperAnswerQue.get("answer"));
             String queId = String.valueOf(PaperAnswerQue.get("queId"));
             String studentId = String.valueOf(PaperAnswerQue.get("studentId"));
@@ -87,11 +91,19 @@ public class PaperAnswerServiceImpl implements PaperAnswerService {
             paperAnswer.setPaperId(paperId);
             paperAnswer.setQueId(queId);
             paperAnswer.setStudentId(studentId);
+
+
             int insertResult = PaperAnswerMapper.insertSelective(paperAnswer);
             System.out.println("result "+insertResult);
             responsePaperAnswerQue.put("上传状态", "成功");
+
             responseList.add(responsePaperAnswerQue);
         }
+        Paper  paper = PaperMapper.selectByPrimaryKey(paperId);
+        System.out.println("paperAnswer"+paper.getJoinNumber());
+        paper.setJoinNumber(paper.getJoinNumber()+1);
+        int res=PaperMapper.updateByPrimaryKey(paper);
+
         map.put("responseList", responseList);
         return map;
     }

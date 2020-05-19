@@ -107,11 +107,13 @@ public class BankSingleChoiceQueServiceImpl implements BankSingleChoiceQueServic
         System.out.println("title"+title);
         String content= (String) obj.get("content");
         String remarks= (String) obj.get("remarks");
+        String paperType=(String) obj.get("paperType");
         Paper paper=new Paper();
         paper.setId(paper_id);
         paper.setTitle(title);
         paper.setContent(content);
         paper.setRemarks(remarks);
+        paper.setPaperType(paperType);
         paper.setCreateDate(new Date());
         System.out.println("paper"+paper);
         paperMapper.insertSelective(paper);
@@ -132,9 +134,12 @@ public class BankSingleChoiceQueServiceImpl implements BankSingleChoiceQueServic
             String choiceE = String.valueOf(bankSingleChoiceQueSingle.get("choiceE"));
             String choiceF = String.valueOf(bankSingleChoiceQueSingle.get("choiceF"));
             String choiceG = String.valueOf(bankSingleChoiceQueSingle.get("choiceG"));
-            String singeType = String.valueOf(bankSingleChoiceQueSingle.get("singeType"));
-
-//            String Qt=String.valueOf(bankSingleChoiceQueSingle.get("queType"));
+            /*题目所属类型
+             * 毕业要求
+             * 课程体系
+             * 实习实训
+             * */
+//            String singeType = String.valueOf(bankSingleChoiceQueSingle.get("singeType"));
 
             Integer queType = Integer.parseInt(bankSingleChoiceQueSingle.get("queType").toString());
             System.out.println("queType"+queType);
@@ -147,7 +152,13 @@ public class BankSingleChoiceQueServiceImpl implements BankSingleChoiceQueServic
             responseBankSingleChoiceQue.put("选项E", choiceE);
             responseBankSingleChoiceQue.put("选项F", choiceF);
             responseBankSingleChoiceQue.put("选项G", choiceG);
-            responseBankSingleChoiceQue.put("所属类型", singeType);
+            /*题目所属类型
+             * 毕业要求
+             * 课程体系
+             * 实习实训
+             * */
+//            responseBankSingleChoiceQue.put("所属类型", singeType);
+
             /*判断是否存在此学生*/
 //            BankSingleChoiceQue stu = BankSingleChoiceQueMapper.selectByPrimaryKey(id);
             if(singleContent.equals("null")||singleContent==null){
@@ -170,8 +181,9 @@ public class BankSingleChoiceQueServiceImpl implements BankSingleChoiceQueServic
                 bankSingleChoiceQue.setChoiceE(choiceE);
                 bankSingleChoiceQue.setChoiceF(choiceF);
                 bankSingleChoiceQue.setChoiceG(choiceG);
-                bankSingleChoiceQue.setSingeType(singeType);
+                bankSingleChoiceQue.setSingeType(paperType);
                 bankSingleChoiceQue.setQueType(queType);
+
                 bankSingleChoiceQue.setCreateDate(new Date());
                 int insertResult = BankSingleChoiceQueMapper.insertSelective(bankSingleChoiceQue);
                 System.out.println("result "+insertResult);

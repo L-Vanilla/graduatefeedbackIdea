@@ -684,6 +684,76 @@ public class PaperExample {
             addCriterion("active not between", value1, value2, "active");
             return (Criteria) this;
         }
+
+        public Criteria andPaperTypeIsNull() {
+            addCriterion("paper_type is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPaperTypeIsNotNull() {
+            addCriterion("paper_type is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPaperTypeEqualTo(String value) {
+            addCriterion("paper_type =", value, "paperType");
+            return (Criteria) this;
+        }
+
+        public Criteria andPaperTypeNotEqualTo(String value) {
+            addCriterion("paper_type <>", value, "paperType");
+            return (Criteria) this;
+        }
+
+        public Criteria andPaperTypeGreaterThan(String value) {
+            addCriterion("paper_type >", value, "paperType");
+            return (Criteria) this;
+        }
+
+        public Criteria andPaperTypeGreaterThanOrEqualTo(String value) {
+            addCriterion("paper_type >=", value, "paperType");
+            return (Criteria) this;
+        }
+
+        public Criteria andPaperTypeLessThan(String value) {
+            addCriterion("paper_type <", value, "paperType");
+            return (Criteria) this;
+        }
+
+        public Criteria andPaperTypeLessThanOrEqualTo(String value) {
+            addCriterion("paper_type <=", value, "paperType");
+            return (Criteria) this;
+        }
+
+        public Criteria andPaperTypeLike(String value) {
+            addCriterion("paper_type like", value, "paperType");
+            return (Criteria) this;
+        }
+
+        public Criteria andPaperTypeNotLike(String value) {
+            addCriterion("paper_type not like", value, "paperType");
+            return (Criteria) this;
+        }
+
+        public Criteria andPaperTypeIn(List<String> values) {
+            addCriterion("paper_type in", values, "paperType");
+            return (Criteria) this;
+        }
+
+        public Criteria andPaperTypeNotIn(List<String> values) {
+            addCriterion("paper_type not in", values, "paperType");
+            return (Criteria) this;
+        }
+
+        public Criteria andPaperTypeBetween(String value1, String value2) {
+            addCriterion("paper_type between", value1, value2, "paperType");
+            return (Criteria) this;
+        }
+
+        public Criteria andPaperTypeNotBetween(String value1, String value2) {
+            addCriterion("paper_type not between", value1, value2, "paperType");
+            return (Criteria) this;
+        }
     }
 
     public static class Criteria extends GeneratedCriteria {

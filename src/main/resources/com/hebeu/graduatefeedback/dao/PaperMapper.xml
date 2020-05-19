@@ -11,6 +11,7 @@
     <result column="state" jdbcType="INTEGER" property="state" />
     <result column="create_date" jdbcType="TIMESTAMP" property="createDate" />
     <result column="active" jdbcType="INTEGER" property="active" />
+    <result column="paper_type" jdbcType="VARCHAR" property="paperType" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -71,7 +72,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, title, content, remarks, provide_number, join_number, state, create_date, active
+    id, title, content, remarks, provide_number, join_number, state, create_date, active, 
+    paper_type
   </sql>
   <select id="selectByExample" parameterType="com.hebeu.graduatefeedback.pojo.PaperExample" resultMap="BaseResultMap">
     select
@@ -106,12 +108,12 @@
   <insert id="insert" parameterType="com.hebeu.graduatefeedback.pojo.Paper">
     insert into paper (id, title, content, 
       remarks, provide_number, join_number, 
-      state, create_date, active
-      )
+      state, create_date, active, 
+      paper_type)
     values (#{id,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR}, 
       #{remarks,jdbcType=VARCHAR}, #{provideNumber,jdbcType=INTEGER}, #{joinNumber,jdbcType=INTEGER}, 
-      #{state,jdbcType=INTEGER}, #{createDate,jdbcType=TIMESTAMP}, #{active,jdbcType=INTEGER}
-      )
+      #{state,jdbcType=INTEGER}, #{createDate,jdbcType=TIMESTAMP}, #{active,jdbcType=INTEGER}, 
+      #{paperType,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.hebeu.graduatefeedback.pojo.Paper">
     insert into paper
@@ -143,6 +145,9 @@
       <if test="active != null">
         active,
       </if>
+      <if test="paperType != null">
+        paper_type,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -171,6 +176,9 @@
       </if>
       <if test="active != null">
         #{active,jdbcType=INTEGER},
+      </if>
+      <if test="paperType != null">
+        #{paperType,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -210,6 +218,9 @@
       <if test="record.active != null">
         active = #{record.active,jdbcType=INTEGER},
       </if>
+      <if test="record.paperType != null">
+        paper_type = #{record.paperType,jdbcType=VARCHAR},
+      </if>
     </set>
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -225,7 +236,8 @@
       join_number = #{record.joinNumber,jdbcType=INTEGER},
       state = #{record.state,jdbcType=INTEGER},
       create_date = #{record.createDate,jdbcType=TIMESTAMP},
-      active = #{record.active,jdbcType=INTEGER}
+      active = #{record.active,jdbcType=INTEGER},
+      paper_type = #{record.paperType,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -257,6 +269,9 @@
       <if test="active != null">
         active = #{active,jdbcType=INTEGER},
       </if>
+      <if test="paperType != null">
+        paper_type = #{paperType,jdbcType=VARCHAR},
+      </if>
     </set>
     where id = #{id,jdbcType=VARCHAR}
   </update>
@@ -269,7 +284,8 @@
       join_number = #{joinNumber,jdbcType=INTEGER},
       state = #{state,jdbcType=INTEGER},
       create_date = #{createDate,jdbcType=TIMESTAMP},
-      active = #{active,jdbcType=INTEGER}
+      active = #{active,jdbcType=INTEGER},
+      paper_type = #{paperType,jdbcType=VARCHAR}
     where id = #{id,jdbcType=VARCHAR}
   </update>
 </mapper>

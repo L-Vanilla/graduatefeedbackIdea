@@ -1,11 +1,8 @@
 package com.hebeu.graduatefeedback.pojo;
 
-import com.fasterxml.jackson.core.SerializableString;
-
-import java.io.Serializable;
 import java.util.Date;
 
-public class Paper  extends MyPage{
+public class Paper extends MyPage {
     private String id;
 
     private String title;
@@ -24,13 +21,7 @@ public class Paper  extends MyPage{
 
     private Integer active;
 
-//    public Paper(String id,String title,String content,String remarks,Date createDate){
-//        this.id=id;
-//        this.title=title;
-//        this.content=content;
-//        this.remarks=remarks;
-//        this.createDate=createDate;
-//    }
+    private String paperType;
 
     public String getId() {
         return id;
@@ -102,5 +93,13 @@ public class Paper  extends MyPage{
 
     public void setActive(Integer active) {
         this.active = active;
+    }
+
+    public String getPaperType() {
+        return paperType;
+    }
+
+    public void setPaperType(String paperType) {
+        this.paperType = paperType == null ? null : paperType.trim();
     }
 }
