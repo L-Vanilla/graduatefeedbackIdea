@@ -1,6 +1,8 @@
 package com.hebeu.graduatefeedback.pojo;
 
-public class PaperAnswer extends MyPage{
+import com.hebeu.graduatefeedback.utils.MailUtils;
+
+public class PaperAnswer extends MyPage {
     private String id;
 
     private String paperId;
@@ -9,7 +11,7 @@ public class PaperAnswer extends MyPage{
 
     private String queId;
 
-    private String studentId;
+    private String longId;
 
     public String getId() {
         return id;
@@ -43,11 +45,11 @@ public class PaperAnswer extends MyPage{
         this.queId = queId == null ? null : queId.trim();
     }
 
-    public String getStudentId() {
-        return studentId;
+    public String getLongId() {
+        return longId;
     }
 
-    public void setStudentId(String studentId) {
-        this.studentId = studentId == null ? null : studentId.trim();
+    public void setLongId(String longId) {
+        this.longId = longId == null ? null : longId.trim();
     }
 }

@@ -65,6 +65,7 @@ public class PaperAnswerServiceImpl implements PaperAnswerService {
     public Map<String, Object> insertPaperAnswerList(Map<String, Object> obj) {
         List<Map<String, Object>> PaperAnswerQueList = (List<Map<String, Object>>) obj.get("PaperAnswerQueList");
         String paperId= (String) obj.get("paperId");
+        String longId= (String) obj.get("longId");
 
         System.out.println("paperId:"+paperId);
         Map<String, Object> map = new HashMap<>();
@@ -74,14 +75,12 @@ public class PaperAnswerServiceImpl implements PaperAnswerService {
 //            Integer id = Integer.parseInt(bankSingleChoiceQueSingle.get("id").toString());
             String answer = String.valueOf(PaperAnswerQue.get("answer"));
             String queId = String.valueOf(PaperAnswerQue.get("queId"));
-            String studentId = String.valueOf(PaperAnswerQue.get("studentId"));
 
 //            Integer queType = Integer.parseInt(bankSingleChoiceQueSingle.get("queType").toString());
 //            responseBankSingleChoiceQue.put("学号", id);
             responsePaperAnswerQue.put("卷子id", paperId);
             responsePaperAnswerQue.put("答案",answer);
             responsePaperAnswerQue.put("条目id", queId);
-            responsePaperAnswerQue.put("学生id", studentId);
 
             /*插入PaperAnswer条目表---------------0*/
             PaperAnswer paperAnswer = new PaperAnswer();
@@ -90,8 +89,7 @@ public class PaperAnswerServiceImpl implements PaperAnswerService {
             paperAnswer.setAnswer(answer);
             paperAnswer.setPaperId(paperId);
             paperAnswer.setQueId(queId);
-            paperAnswer.setStudentId(studentId);
-
+            paperAnswer.setLongId(longId);
 
             int insertResult = PaperAnswerMapper.insertSelective(paperAnswer);
             System.out.println("result "+insertResult);

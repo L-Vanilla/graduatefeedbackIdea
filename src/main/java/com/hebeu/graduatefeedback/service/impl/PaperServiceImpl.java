@@ -35,13 +35,14 @@ public class PaperServiceImpl implements PaperService {
         for (Map<String, Object> Student : StudentList){
             Integer provideNumber=0;//发放试卷数
             Map<String, Object> responsePaperAnswerQue = new HashMap<>();
-            Integer studentId = Integer.parseInt(Student.get("studentId").toString());
+//            Integer studentId = Integer.parseInt(Student.get("studentId").toString());
+            String longId=UUIDUtil.getUUID();
             String mail = String.valueOf(Student.get("mail"));
             String paperId = String.valueOf(Student.get("paperId"));
             Paper paper = PaperMapper.selectByPrimaryKey(paperId);
             try {
                 MailUtils.sendMail(mail,"这是学校的一份调查问卷" +
-                        "<br><a href='http://127.0.0.1:8080/paperDetails/"+paperId+"'>点击</a>");
+                        "<br><a href='http://127.0.0.1:8080/paperAnswer/"+paperId+"/"+longId+"'>点击</a>");
             } catch (MessagingException e) {
                 e.printStackTrace();
             }

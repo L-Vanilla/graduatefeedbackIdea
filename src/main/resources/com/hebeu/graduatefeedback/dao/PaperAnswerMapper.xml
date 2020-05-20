@@ -6,7 +6,7 @@
     <result column="paper_id" jdbcType="VARCHAR" property="paperId" />
     <result column="answer" jdbcType="VARCHAR" property="answer" />
     <result column="que_id" jdbcType="VARCHAR" property="queId" />
-    <result column="student_id" jdbcType="VARCHAR" property="studentId" />
+    <result column="long_id" jdbcType="VARCHAR" property="longId" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -67,7 +67,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, paper_id, answer, que_id, student_id
+    id, paper_id, answer, que_id, long_id
   </sql>
   <select id="selectByExample" parameterType="com.hebeu.graduatefeedback.pojo.PaperAnswerExample" resultMap="BaseResultMap">
     select
@@ -101,9 +101,9 @@
   </delete>
   <insert id="insert" parameterType="com.hebeu.graduatefeedback.pojo.PaperAnswer">
     insert into paper_answer (id, paper_id, answer, 
-      que_id, student_id)
+      que_id, long_id)
     values (#{id,jdbcType=VARCHAR}, #{paperId,jdbcType=VARCHAR}, #{answer,jdbcType=VARCHAR}, 
-      #{queId,jdbcType=VARCHAR}, #{studentId,jdbcType=VARCHAR})
+      #{queId,jdbcType=VARCHAR}, #{longId,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.hebeu.graduatefeedback.pojo.PaperAnswer">
     insert into paper_answer
@@ -120,8 +120,8 @@
       <if test="queId != null">
         que_id,
       </if>
-      <if test="studentId != null">
-        student_id,
+      <if test="longId != null">
+        long_id,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
@@ -137,8 +137,8 @@
       <if test="queId != null">
         #{queId,jdbcType=VARCHAR},
       </if>
-      <if test="studentId != null">
-        #{studentId,jdbcType=VARCHAR},
+      <if test="longId != null">
+        #{longId,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -163,8 +163,8 @@
       <if test="record.queId != null">
         que_id = #{record.queId,jdbcType=VARCHAR},
       </if>
-      <if test="record.studentId != null">
-        student_id = #{record.studentId,jdbcType=VARCHAR},
+      <if test="record.longId != null">
+        long_id = #{record.longId,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null">
@@ -177,7 +177,7 @@
       paper_id = #{record.paperId,jdbcType=VARCHAR},
       answer = #{record.answer,jdbcType=VARCHAR},
       que_id = #{record.queId,jdbcType=VARCHAR},
-      student_id = #{record.studentId,jdbcType=VARCHAR}
+      long_id = #{record.longId,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -194,8 +194,8 @@
       <if test="queId != null">
         que_id = #{queId,jdbcType=VARCHAR},
       </if>
-      <if test="studentId != null">
-        student_id = #{studentId,jdbcType=VARCHAR},
+      <if test="longId != null">
+        long_id = #{longId,jdbcType=VARCHAR},
       </if>
     </set>
     where id = #{id,jdbcType=VARCHAR}
@@ -205,7 +205,7 @@
     set paper_id = #{paperId,jdbcType=VARCHAR},
       answer = #{answer,jdbcType=VARCHAR},
       que_id = #{queId,jdbcType=VARCHAR},
-      student_id = #{studentId,jdbcType=VARCHAR}
+      long_id = #{longId,jdbcType=VARCHAR}
     where id = #{id,jdbcType=VARCHAR}
   </update>
 </mapper>

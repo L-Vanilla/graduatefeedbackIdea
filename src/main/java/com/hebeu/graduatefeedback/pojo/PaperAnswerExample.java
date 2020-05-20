@@ -384,73 +384,73 @@ public class PaperAnswerExample {
             return (Criteria) this;
         }
 
-        public Criteria andStudentIdIsNull() {
-            addCriterion("student_id is null");
+        public Criteria andLongIdIsNull() {
+            addCriterion("long_id is null");
             return (Criteria) this;
         }
 
-        public Criteria andStudentIdIsNotNull() {
-            addCriterion("student_id is not null");
+        public Criteria andLongIdIsNotNull() {
+            addCriterion("long_id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andStudentIdEqualTo(String value) {
-            addCriterion("student_id =", value, "studentId");
+        public Criteria andLongIdEqualTo(String value) {
+            addCriterion("long_id =", value, "longId");
             return (Criteria) this;
         }
 
-        public Criteria andStudentIdNotEqualTo(String value) {
-            addCriterion("student_id <>", value, "studentId");
+        public Criteria andLongIdNotEqualTo(String value) {
+            addCriterion("long_id <>", value, "longId");
             return (Criteria) this;
         }
 
-        public Criteria andStudentIdGreaterThan(String value) {
-            addCriterion("student_id >", value, "studentId");
+        public Criteria andLongIdGreaterThan(String value) {
+            addCriterion("long_id >", value, "longId");
             return (Criteria) this;
         }
 
-        public Criteria andStudentIdGreaterThanOrEqualTo(String value) {
-            addCriterion("student_id >=", value, "studentId");
+        public Criteria andLongIdGreaterThanOrEqualTo(String value) {
+            addCriterion("long_id >=", value, "longId");
             return (Criteria) this;
         }
 
-        public Criteria andStudentIdLessThan(String value) {
-            addCriterion("student_id <", value, "studentId");
+        public Criteria andLongIdLessThan(String value) {
+            addCriterion("long_id <", value, "longId");
             return (Criteria) this;
         }
 
-        public Criteria andStudentIdLessThanOrEqualTo(String value) {
-            addCriterion("student_id <=", value, "studentId");
+        public Criteria andLongIdLessThanOrEqualTo(String value) {
+            addCriterion("long_id <=", value, "longId");
             return (Criteria) this;
         }
 
-        public Criteria andStudentIdLike(String value) {
-            addCriterion("student_id like", value, "studentId");
+        public Criteria andLongIdLike(String value) {
+            addCriterion("long_id like", value, "longId");
             return (Criteria) this;
         }
 
-        public Criteria andStudentIdNotLike(String value) {
-            addCriterion("student_id not like", value, "studentId");
+        public Criteria andLongIdNotLike(String value) {
+            addCriterion("long_id not like", value, "longId");
             return (Criteria) this;
         }
 
-        public Criteria andStudentIdIn(List<String> values) {
-            addCriterion("student_id in", values, "studentId");
+        public Criteria andLongIdIn(List<String> values) {
+            addCriterion("long_id in", values, "longId");
             return (Criteria) this;
         }
 
-        public Criteria andStudentIdNotIn(List<String> values) {
-            addCriterion("student_id not in", values, "studentId");
+        public Criteria andLongIdNotIn(List<String> values) {
+            addCriterion("long_id not in", values, "longId");
             return (Criteria) this;
         }
 
-        public Criteria andStudentIdBetween(String value1, String value2) {
-            addCriterion("student_id between", value1, value2, "studentId");
+        public Criteria andLongIdBetween(String value1, String value2) {
+            addCriterion("long_id between", value1, value2, "longId");
             return (Criteria) this;
         }
 
-        public Criteria andStudentIdNotBetween(String value1, String value2) {
-            addCriterion("student_id not between", value1, value2, "studentId");
+        public Criteria andLongIdNotBetween(String value1, String value2) {
+            addCriterion("long_id not between", value1, value2, "longId");
             return (Criteria) this;
         }
     }
