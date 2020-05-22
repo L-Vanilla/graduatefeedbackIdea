@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hebeu.graduatefeedback.dao.SumViewMapper">
+  <resultMap id="BaseResultMap" type="com.hebeu.graduatefeedback.pojo.SumView">
+    <result column="long_id" jdbcType="VARCHAR" property="longId" />
+    <result column="que_id" jdbcType="VARCHAR" property="queId" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="content" jdbcType="VARCHAR" property="content" />
+    <result column="remarks" jdbcType="VARCHAR" property="remarks" />
+    <result column="single_content" jdbcType="VARCHAR" property="singleContent" />
+    <result column="paper_id" jdbcType="VARCHAR" property="paperId" />
+    <result column="choice_A" jdbcType="VARCHAR" property="choiceA" />
+    <result column="choice_B" jdbcType="VARCHAR" property="choiceB" />
+    <result column="choice_C" jdbcType="VARCHAR" property="choiceC" />
+    <result column="choice_D" jdbcType="VARCHAR" property="choiceD" />
+    <result column="choice_E" jdbcType="VARCHAR" property="choiceE" />
+    <result column="choice_F" jdbcType="VARCHAR" property="choiceF" />
+    <result column="choice_G" jdbcType="VARCHAR" property="choiceG" />
+    <result column="que_type" jdbcType="INTEGER" property="queType" />
+    <result column="que_num" jdbcType="INTEGER" property="queNum" />
+    <result column="answer_id" jdbcType="VARCHAR" property="answerId" />
+    <result column="answer" jdbcType="VARCHAR" property="answer" />
+    <result column="create_date" jdbcType="TIMESTAMP" property="createDate" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    long_id, que_id, title, content, remarks, single_content, paper_id, choice_A, choice_B, 
+    choice_C, choice_D, choice_E, choice_F, choice_G, que_type, que_num, answer_id, answer, 
+    create_date
+  </sql>
+  <select id="selectByExample" parameterType="com.hebeu.graduatefeedback.pojo.SumViewExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from sum_view
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="groupByClause != null">
+      group by ${groupByClause}
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <delete id="deleteByExample" parameterType="com.hebeu.graduatefeedback.pojo.SumViewExample">
+    delete from sum_view
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.hebeu.graduatefeedback.pojo.SumView">
+    insert into sum_view (long_id, que_id, title, 
+      content, remarks, single_content, 
+      paper_id, choice_A, choice_B, 
+      choice_C, choice_D, choice_E, 
+      choice_F, choice_G, que_type, 
+      que_num, answer_id, answer, 
+      create_date)
+    values (#{longId,jdbcType=VARCHAR}, #{queId,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, 
+      #{content,jdbcType=VARCHAR}, #{remarks,jdbcType=VARCHAR}, #{singleContent,jdbcType=VARCHAR}, 
+      #{paperId,jdbcType=VARCHAR}, #{choiceA,jdbcType=VARCHAR}, #{choiceB,jdbcType=VARCHAR}, 
+      #{choiceC,jdbcType=VARCHAR}, #{choiceD,jdbcType=VARCHAR}, #{choiceE,jdbcType=VARCHAR}, 
+      #{choiceF,jdbcType=VARCHAR}, #{choiceG,jdbcType=VARCHAR}, #{queType,jdbcType=INTEGER}, 
+      #{queNum,jdbcType=INTEGER}, #{answerId,jdbcType=VARCHAR}, #{answer,jdbcType=VARCHAR}, 
+      #{createDate,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.hebeu.graduatefeedback.pojo.SumView">
+    insert into sum_view
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="longId != null">
+        long_id,
+      </if>
+      <if test="queId != null">
+        que_id,
+      </if>
+      <if test="title != null">
+        title,
+      </if>
+      <if test="content != null">
+        content,
+      </if>
+      <if test="remarks != null">
+        remarks,
+      </if>
+      <if test="singleContent != null">
+        single_content,
+      </if>
+      <if test="paperId != null">
+        paper_id,
+      </if>
+      <if test="choiceA != null">
+        choice_A,
+      </if>
+      <if test="choiceB != null">
+        choice_B,
+      </if>
+      <if test="choiceC != null">
+        choice_C,
+      </if>
+      <if test="choiceD != null">
+        choice_D,
+      </if>
+      <if test="choiceE != null">
+        choice_E,
+      </if>
+      <if test="choiceF != null">
+        choice_F,
+      </if>
+      <if test="choiceG != null">
+        choice_G,
+      </if>
+      <if test="queType != null">
+        que_type,
+      </if>
+      <if test="queNum != null">
+        que_num,
+      </if>
+      <if test="answerId != null">
+        answer_id,
+      </if>
+      <if test="answer != null">
+        answer,
+      </if>
+      <if test="createDate != null">
+        create_date,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="longId != null">
+        #{longId,jdbcType=VARCHAR},
+      </if>
+      <if test="queId != null">
+        #{queId,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="content != null">
+        #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="remarks != null">
+        #{remarks,jdbcType=VARCHAR},
+      </if>
+      <if test="singleContent != null">
+        #{singleContent,jdbcType=VARCHAR},
+      </if>
+      <if test="paperId != null">
+        #{paperId,jdbcType=VARCHAR},
+      </if>
+      <if test="choiceA != null">
+        #{choiceA,jdbcType=VARCHAR},
+      </if>
+      <if test="choiceB != null">
+        #{choiceB,jdbcType=VARCHAR},
+      </if>
+      <if test="choiceC != null">
+        #{choiceC,jdbcType=VARCHAR},
+      </if>
+      <if test="choiceD != null">
+        #{choiceD,jdbcType=VARCHAR},
+      </if>
+      <if test="choiceE != null">
+        #{choiceE,jdbcType=VARCHAR},
+      </if>
+      <if test="choiceF != null">
+        #{choiceF,jdbcType=VARCHAR},
+      </if>
+      <if test="choiceG != null">
+        #{choiceG,jdbcType=VARCHAR},
+      </if>
+      <if test="queType != null">
+        #{queType,jdbcType=INTEGER},
+      </if>
+      <if test="queNum != null">
+        #{queNum,jdbcType=INTEGER},
+      </if>
+      <if test="answerId != null">
+        #{answerId,jdbcType=VARCHAR},
+      </if>
+      <if test="answer != null">
+        #{answer,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null">
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.hebeu.graduatefeedback.pojo.SumViewExample" resultType="java.lang.Long">
+    select count(*) from sum_view
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update sum_view
+    <set>
+      <if test="record.longId != null">
+        long_id = #{record.longId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.queId != null">
+        que_id = #{record.queId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.title != null">
+        title = #{record.title,jdbcType=VARCHAR},
+      </if>
+      <if test="record.content != null">
+        content = #{record.content,jdbcType=VARCHAR},
+      </if>
+      <if test="record.remarks != null">
+        remarks = #{record.remarks,jdbcType=VARCHAR},
+      </if>
+      <if test="record.singleContent != null">
+        single_content = #{record.singleContent,jdbcType=VARCHAR},
+      </if>
+      <if test="record.paperId != null">
+        paper_id = #{record.paperId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.choiceA != null">
+        choice_A = #{record.choiceA,jdbcType=VARCHAR},
+      </if>
+      <if test="record.choiceB != null">
+        choice_B = #{record.choiceB,jdbcType=VARCHAR},
+      </if>
+      <if test="record.choiceC != null">
+        choice_C = #{record.choiceC,jdbcType=VARCHAR},
+      </if>
+      <if test="record.choiceD != null">
+        choice_D = #{record.choiceD,jdbcType=VARCHAR},
+      </if>
+      <if test="record.choiceE != null">
+        choice_E = #{record.choiceE,jdbcType=VARCHAR},
+      </if>
+      <if test="record.choiceF != null">
+        choice_F = #{record.choiceF,jdbcType=VARCHAR},
+      </if>
+      <if test="record.choiceG != null">
+        choice_G = #{record.choiceG,jdbcType=VARCHAR},
+      </if>
+      <if test="record.queType != null">
+        que_type = #{record.queType,jdbcType=INTEGER},
+      </if>
+      <if test="record.queNum != null">
+        que_num = #{record.queNum,jdbcType=INTEGER},
+      </if>
+      <if test="record.answerId != null">
+        answer_id = #{record.answerId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.answer != null">
+        answer = #{record.answer,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createDate != null">
+        create_date = #{record.createDate,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update sum_view
+    set long_id = #{record.longId,jdbcType=VARCHAR},
+      que_id = #{record.queId,jdbcType=VARCHAR},
+      title = #{record.title,jdbcType=VARCHAR},
+      content = #{record.content,jdbcType=VARCHAR},
+      remarks = #{record.remarks,jdbcType=VARCHAR},
+      single_content = #{record.singleContent,jdbcType=VARCHAR},
+      paper_id = #{record.paperId,jdbcType=VARCHAR},
+      choice_A = #{record.choiceA,jdbcType=VARCHAR},
+      choice_B = #{record.choiceB,jdbcType=VARCHAR},
+      choice_C = #{record.choiceC,jdbcType=VARCHAR},
+      choice_D = #{record.choiceD,jdbcType=VARCHAR},
+      choice_E = #{record.choiceE,jdbcType=VARCHAR},
+      choice_F = #{record.choiceF,jdbcType=VARCHAR},
+      choice_G = #{record.choiceG,jdbcType=VARCHAR},
+      que_type = #{record.queType,jdbcType=INTEGER},
+      que_num = #{record.queNum,jdbcType=INTEGER},
+      answer_id = #{record.answerId,jdbcType=VARCHAR},
+      answer = #{record.answer,jdbcType=VARCHAR},
+      create_date = #{record.createDate,jdbcType=TIMESTAMP}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+</mapper>

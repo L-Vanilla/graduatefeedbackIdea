@@ -90,6 +90,7 @@ public class PaperAnswerServiceImpl implements PaperAnswerService {
             paperAnswer.setPaperId(paperId);
             paperAnswer.setQueId(queId);
             paperAnswer.setLongId(longId);
+            paperAnswer.setCreateDate(new Date());
 
             int insertResult = PaperAnswerMapper.insertSelective(paperAnswer);
             System.out.println("result "+insertResult);

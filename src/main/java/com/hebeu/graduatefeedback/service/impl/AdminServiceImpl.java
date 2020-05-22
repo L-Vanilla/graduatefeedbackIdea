@@ -27,15 +27,12 @@ public class AdminServiceImpl implements AdminService {
         AdminExample AdminExample = new AdminExample();
         AdminExample.Criteria criteria = AdminExample.createCriteria();
         if (StringUtils.isNotBlank(admin.getName())) {
-            criteria.andNameLike("%" + admin.getName() + "%").andActiveEqualTo(1);
+            criteria.andNameLike("%" + admin.getName() + "%").andActiveEqualTo(1).andRoleEqualTo(1);
         }
         else {
-            criteria.andActiveEqualTo(1);
+            criteria.andActiveEqualTo(1).andRoleEqualTo(1);
         }
         AdminExample.setOrderByClause("id desc");
-//        if(Admin.getActive()!=null)
-//            criteria.andActiveEqualTo(Admin.getActive());
-
         return AdminMapper.selectByExample(AdminExample);
     }
 
@@ -73,9 +70,9 @@ public class AdminServiceImpl implements AdminService {
     public int update(Admin admin) {
         return AdminMapper.updateByPrimaryKeySelective(admin);
     }
-//    /*19-12-29用户登录*/
-//    public Admin getByNameAndPwd(String name, String password) {
-//        return AdminMapper.selectByNameAndPwd(name,password);
-//    }
+    /*19-12-29用户登录*/
+    public Admin getByIdAndPwd(Integer id, String password) {
+        return AdminMapper.getByIdAndPwd(id,password);
+    }
 
 }

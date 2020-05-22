@@ -58,7 +58,9 @@
         <!--//试卷视图-->
         <!--<table tableName="paper_view"></table>-->
         <!--//学生答案-->
-        <table tableName="paper_answer"></table>
+        <!--<table tableName="paper_answer"></table>-->
+        <!--//统计视图-->
+        <table tableName="sum_view"></table>
 
         <!-- 有些表的字段需要指定java类型
          <table schema="" tableName="">

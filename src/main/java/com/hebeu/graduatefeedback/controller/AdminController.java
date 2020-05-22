@@ -68,6 +68,33 @@ public class AdminController {
         Admin admin = AdminService.getAdminById(id);
         return ServerResponse.createBySuccess("获取成功！",admin);
     }
+    //    /*19-12-29管理员登录*/
+    @CrossOrigin(allowCredentials = "true")
+    @PostMapping("/login")
+    public Admin login(@Param("id") Integer id, @Param("password") String password, HttpServletResponse response) {
+        Admin admin = AdminService.getByIdAndPwd(id, password);
+        Cookie cookie = new Cookie("adminName", admin.getName());
+        cookie.setMaxAge(24 * 60 * 60); //存活期为1天
+        cookie.setPath("/");
+        response.addCookie(cookie);
+        System.out.println("cookie" + cookie.getValue());
+        return admin;
+    }
+    /*19-12-29管理员退出
+    * */
+    @GetMapping("/logout")
+    public Integer logout(HttpServletRequest request,
+                          HttpServletResponse response) {
+        Cookie[] cookies = request.getCookies();
+        if (cookies != null) {
+            for (int i = 0; i < cookies.length; i++) {
+                Cookie cookie = cookies[i];
+                cookie.setMaxAge(0);//销毁cookie
+                response.addCookie(cookie);
+            }
+        }
+        return 1;
+    }
     /*初始的*/
    /* @GetMapping("/list")
     public PageInfo<Admin> getAdmin(Admin admin){

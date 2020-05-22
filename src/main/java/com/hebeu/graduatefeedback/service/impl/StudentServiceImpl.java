@@ -112,7 +112,16 @@ public class StudentServiceImpl implements StudentService {
         StudentExample.Criteria criteria = StudentExample.createCriteria();
         System.out.println("用户名Service"+student.getName());
         if (StringUtils.isNotBlank(student.getName())) {
-            criteria.andNameEqualTo(student.getName()).andActiveEqualTo(1);
+            criteria.andNameLike("%" + student.getName() + "%").andActiveEqualTo(1);
+        }
+        if (StringUtils.isNotBlank(student.getCollege())) {
+            criteria.andCollegeLike("%" + student.getCollege() + "%").andActiveEqualTo(1);
+        }
+        if (StringUtils.isNotBlank(student.getSpecialty())) {
+            criteria.andSpecialtyLike("%" + student.getSpecialty() + "%").andActiveEqualTo(1);
+        }
+        if (StringUtils.isNotBlank(student.getGrade())) {
+            criteria.andGradeLike("%" + student.getGrade() + "%").andActiveEqualTo(1);
         }
         else {
             criteria.andActiveEqualTo(1);

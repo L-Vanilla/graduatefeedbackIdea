@@ -27,4 +27,6 @@ public interface AdminMapper {
     int updateByPrimaryKeySelective(Admin record);
 
     int updateByPrimaryKey(Admin record);
+    /*19-12-29用户登录*/
+    Admin getByIdAndPwd(@Param("id") Integer id,@Param("password") String password);
 }

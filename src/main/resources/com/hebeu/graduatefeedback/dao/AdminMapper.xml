@@ -335,4 +335,11 @@
       id_card = #{idCard,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  <!--19-12-29用户登录-->
+  <select id="getByIdAndPwd" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from admin
+    WHERE id = #{id} and password = #{password} and active=1
+  </select>
 </mapper>

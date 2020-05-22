@@ -1,8 +1,8 @@
 package com.hebeu.graduatefeedback.pojo;
 
-import com.hebeu.graduatefeedback.utils.MailUtils;
+import java.util.Date;
 
-public class PaperAnswer extends MyPage {
+public class PaperAnswer extends MyPage{
     private String id;
 
     private String paperId;
@@ -12,6 +12,8 @@ public class PaperAnswer extends MyPage {
     private String queId;
 
     private String longId;
+
+    private Date createDate;
 
     public String getId() {
         return id;
@@ -51,5 +53,13 @@ public class PaperAnswer extends MyPage {
 
     public void setLongId(String longId) {
         this.longId = longId == null ? null : longId.trim();
+    }
+
+    public Date getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
     }
 }
