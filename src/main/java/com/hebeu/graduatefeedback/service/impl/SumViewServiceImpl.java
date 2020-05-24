@@ -123,6 +123,7 @@ public class SumViewServiceImpl implements SumViewService {
                 answerB.put("value","B");
             }
             answerList.add(answerB);
+
             Map<String, String> answerC = new HashMap<>();
             answerC.put("label",sumView.getChoiceC());
             if(sumView.getAnswer().contains("C")){
@@ -132,6 +133,42 @@ public class SumViewServiceImpl implements SumViewService {
             }
             answerList.add(answerC);
 
+//            Map<String, String> answerD = new HashMap<>();
+//            answerD.put("label",sumView.getChoiceD());
+//            if(sumView.getAnswer().contains("D")){
+//                answerD.put("value","1");
+//            }else{
+//                answerD.put("value","D");
+//            }
+//            answerList.add(answerD);
+//
+//            Map<String, String> answerE = new HashMap<>();
+//            answerE.put("label",sumView.getChoiceE());
+//            if(sumView.getAnswer().contains("E")){
+//                answerE.put("value","1");
+//            }else{
+//                answerE.put("value","E");
+//            }
+//            answerList.add(answerE);
+//
+//            Map<String, String> answerF = new HashMap<>();
+//            answerE.put("label",sumView.getChoiceF());
+//            if(sumView.getAnswer().contains("F")){
+//                answerF.put("value","1");
+//            }else{
+//                answerF.put("value","F");
+//            }
+//            answerList.add(answerE);
+//
+//            Map<String, String> answerG = new HashMap<>();
+//            answerG.put("label",sumView.getChoiceG());
+//            if(sumView.getAnswer().contains("G")){
+//                answerG.put("value","1");
+//            }else{
+//                answerG.put("value","G");
+//            }
+//            answerList.add(answerG);
+
             map.put("answers",answerList);
 
 
@@ -139,7 +176,9 @@ public class SumViewServiceImpl implements SumViewService {
         }
 
         return listResult;
-    } /*获取试卷的所有题目信息*/
+    }
+
+    /*获取试卷的所有题目信息*/
     @Override
     public List<Map<String, Object>> GetAllAnswers(String paperId) {
         List<Map<String, Object>> listResult = new ArrayList<>();
@@ -151,9 +190,12 @@ public class SumViewServiceImpl implements SumViewService {
         }
         SumViewExample.setGroupByClause("long_id");
         SumViewExample.setOrderByClause("create_date desc");
+//        SumViewExample.setGroupByClause("long_id");
 //        if(SumView.getActive()!=null)
 //            criteria.andActiveEqualTo(SumView.getActive());
         List<SumView> sumViewListByPaperId=SumViewMapper.selectByExample(SumViewExample);
+
+        List<Map<String, String>> answerList = new ArrayList<>();
         /*从通过遍历paperid查找的语句中找到longid*/
         for(SumView sumViewByPaperId : sumViewListByPaperId){
             Map<String, Object> map = new HashMap<>();
@@ -165,46 +207,58 @@ public class SumViewServiceImpl implements SumViewService {
             }
             sumViewExample1.setOrderByClause("que_num asc");
             List<SumView> sumViewList = SumViewMapper.selectByExample(sumViewExample1);
-            List<Map<String, String>> answerList = new ArrayList<>();
-            System.out.println("sumViewListByPaperId:"+sumViewListByPaperId);
+//            System.out.println("sumViewListByPaperId:"+sumViewListByPaperId.size());
+//            System.out.println("sumViewListByPaperId:"+sumViewListByPaperId.size());
+            Map<String, String> answers = new HashMap<>();
             for (int i=0;i<sumViewList.size();i++){
-                System.out.println("sumViewList:"+sumViewList.get(i).getAnswer());
-                Map<String, String> answers = new HashMap<>();
+//                System.out.println("sumViewList:"+sumViewList.size());
                 String AnswerChoice ="";
-                if(sumViewList.get(i).getAnswer().contains("A")){
-                    AnswerChoice=AnswerChoice+"A:"+sumViewByPaperId.getChoiceA();
-                    answers.put("answer"+i,AnswerChoice);
+
+                if(sumViewList.get(i).getAnswer().indexOf("A")>-1){
+                    System.out.println("Aif");
+                    AnswerChoice=AnswerChoice+"A:"+sumViewList.get(i).getChoiceA();
+                }
+                else{
+                    System.out.println("A:"+sumViewList.get(i).getAnswer());
                 }
                 if(sumViewList.get(i).getAnswer().contains("B")){
-                    AnswerChoice=AnswerChoice+"B:"+sumViewByPaperId.getChoiceB();
-                    answers.put("answer"+i,AnswerChoice);
+                    System.out.println("Bif");
+                    AnswerChoice=AnswerChoice+"B:"+sumViewList.get(i).getChoiceB();
+                }else{
+                    System.out.println("B:"+sumViewList.get(i).getAnswer());
                 }
                 if(sumViewList.get(i).getAnswer().contains("C")){
-                    AnswerChoice=AnswerChoice+"C:"+sumViewByPaperId.getChoiceC();
-                    answers.put("answer"+i,AnswerChoice);
+                    System.out.println("Cif");
+                    AnswerChoice=AnswerChoice+"C:"+sumViewList.get(i).getChoiceC();
                 }
+                else{
+
+                }
+                if(sumViewList.get(i).getAnswer().equals("null")){
+                    AnswerChoice="未作答";
+                }
+
                 if(sumViewList.get(i).getAnswer().contains("D")){
-                    AnswerChoice=AnswerChoice+"D:"+sumViewByPaperId.getChoiceD();
-                    answers.put("answer"+i,AnswerChoice);
+                    AnswerChoice=AnswerChoice+"D:"+sumViewList.get(i).getChoiceD();
                 }
                 if(sumViewList.get(i).getAnswer().contains("E")){
-                    AnswerChoice=AnswerChoice+"E:"+sumViewByPaperId.getChoiceE();
-                    answers.put("answer"+i,AnswerChoice);
-                } if(sumViewList.get(i).getAnswer().contains("F")){
-                    AnswerChoice=AnswerChoice+"F:"+sumViewByPaperId.getChoiceE();
-                    answers.put("answer"+i,AnswerChoice);
-                } if(sumViewList.get(i).getAnswer().contains("G")){
-                    AnswerChoice=AnswerChoice+"G:"+sumViewByPaperId.getChoiceE();
-                    answers.put("answer"+i,AnswerChoice);
-                }else{
-                    AnswerChoice=sumViewList.get(i).getAnswer();
-                    answers.put("answer"+i,AnswerChoice);
+                    AnswerChoice=AnswerChoice+"E:"+sumViewList.get(i).getChoiceE();
                 }
-                System.out.println("answer:"+i+answers.get("answer"+i));
-                answerList.add(answers);
+                if(sumViewList.get(i).getAnswer().contains("F")){
+                    AnswerChoice=AnswerChoice+"F:"+sumViewList.get(i).getChoiceF();
+                }
+                if(sumViewList.get(i).getAnswer().contains("G")){
+                    AnswerChoice=AnswerChoice+"G:"+sumViewList.get(i).getChoiceG();
+                }
+                if(StringUtils.isBlank(AnswerChoice)){
+                    AnswerChoice=sumViewList.get(i).getAnswer();
+                }
+                map.put("answer"+i,AnswerChoice);
+                System.out.println("answer:"+i+map.get("answer"+i));
             }
-            map.put("answerList",answerList);
-            System.out.println("answerList"+map.get("answerList"));
+//            answerList.add(answers);
+//            map.put("answers",answers);
+//            System.out.println("answers"+map.get("answers"));
             listResult.add(map);
         }
 
@@ -212,4 +266,10 @@ public class SumViewServiceImpl implements SumViewService {
         return listResult;
     }
 
+    /*通过que_id查询统单选题的指标信息*/
+    @Override
+    public List<Map<String, String>> SumSingleAnswerByQueId(String queId) {
+
+        return SumViewMapper.SumSingleAnswerByQueId(queId);
+    }
 }

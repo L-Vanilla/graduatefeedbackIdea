@@ -33,6 +33,7 @@ public class PaperQueServiceImpl implements PaperQueService {
 //        else {
 //            criteria.andActiveEqualTo(1);
 //        }
+//        criteria.andQueTypeBetween(0,3);
         PaperQueExample.setOrderByClause("id desc");
 //        if(PaperQue.getActive()!=null)
 //            criteria.andActiveEqualTo(PaperQue.getActive());

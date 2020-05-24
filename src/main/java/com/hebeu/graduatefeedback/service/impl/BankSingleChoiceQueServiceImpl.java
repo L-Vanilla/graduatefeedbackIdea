@@ -220,13 +220,12 @@ public class BankSingleChoiceQueServiceImpl implements BankSingleChoiceQueServic
         else {
             criteria.andActiveEqualTo(1);
         }
+        criteria.andQueTypeBetween(0,3);
         BankSingleChoiceQueExample.setOrderByClause("create_date desc");
 //        if(BankSingleChoiceQue.getActive()!=null)
 //            criteria.andActiveEqualTo(BankSingleChoiceQue.getActive());
-
         return BankSingleChoiceQueMapper.selectByExample(BankSingleChoiceQueExample);
     }
-
     @Override
     public List<BankSingleChoiceQue> getAll(BankSingleChoiceQue bankSingleChoiceQue) {
         BankSingleChoiceQueExample BankSingleChoiceQueExample = new BankSingleChoiceQueExample();

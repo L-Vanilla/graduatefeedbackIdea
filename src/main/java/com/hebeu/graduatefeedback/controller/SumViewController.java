@@ -1,5 +1,6 @@
 package com.hebeu.graduatefeedback.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.github.pagehelper.PageInfo;
 import com.hebeu.graduatefeedback.pojo.SumView;
 import com.hebeu.graduatefeedback.utils.ServerResponse;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -61,6 +63,19 @@ public class SumViewController {
         else {
             return ServerResponse.createByError("通过paper_id获取信息失败");
         }
+    }
+
+    /*通过que_id查询统单选题的指标信息*/
+    @GetMapping("/SumSingleAnswerByQueId")
+    public String SumSingleAnswerByQueId(String queId){
+        System.out.println("queid"+queId);
+        Map<String,List<?>> map = new HashMap<>();
+        /*统计老人的男女比例*/
+        map.put("SingleAnswers",SumViewService.SumSingleAnswerByQueId(queId));
+//        List<Map<String,String>> map = SumViewService.SumSingleAnswerByQueId(queId);
+        System.out.println("maptongji"+map);
+        return JSON.toJSONString(map);
+
     }
 
 
