@@ -106,69 +106,79 @@ public class SumViewServiceImpl implements SumViewService {
             map.put("options",optionsList);
             List<Map<String, String>> answerList = new ArrayList<>();
 
-            Map<String, String> answerA = new HashMap<>();
-            answerA.put("label",sumView.getChoiceA());
-            if(sumView.getAnswer().contains("A")){
-                answerA.put("value","1");
-            }
-            else{
-                answerA.put("value","A");
-            }
-            answerList.add(answerA);
-            Map<String, String> answerB = new HashMap<>();
-            answerB.put("label",sumView.getChoiceB());
-            if(sumView.getAnswer().contains("B")){
-                answerB.put("value","1");
-            }else{
-                answerB.put("value","B");
-            }
-            answerList.add(answerB);
+            /*判断多选题*/
 
-            Map<String, String> answerC = new HashMap<>();
-            answerC.put("label",sumView.getChoiceC());
-            if(sumView.getAnswer().contains("C")){
-                answerC.put("value","1");
-            }else{
-                answerC.put("value","C");
+            if(!sumView.getChoiceA().equals("null")){
+                Map<String, String> answerA = new HashMap<>();
+                answerA.put("label",sumView.getChoiceA());
+                if(sumView.getAnswer().contains("A")){
+                    answerA.put("value","1");
+                }
+                else{
+                    answerA.put("value","A");
+                }
+                answerList.add(answerA);
             }
-            answerList.add(answerC);
-
-//            Map<String, String> answerD = new HashMap<>();
-//            answerD.put("label",sumView.getChoiceD());
-//            if(sumView.getAnswer().contains("D")){
-//                answerD.put("value","1");
-//            }else{
-//                answerD.put("value","D");
-//            }
-//            answerList.add(answerD);
-//
-//            Map<String, String> answerE = new HashMap<>();
-//            answerE.put("label",sumView.getChoiceE());
-//            if(sumView.getAnswer().contains("E")){
-//                answerE.put("value","1");
-//            }else{
-//                answerE.put("value","E");
-//            }
-//            answerList.add(answerE);
-//
-//            Map<String, String> answerF = new HashMap<>();
-//            answerE.put("label",sumView.getChoiceF());
-//            if(sumView.getAnswer().contains("F")){
-//                answerF.put("value","1");
-//            }else{
-//                answerF.put("value","F");
-//            }
-//            answerList.add(answerE);
-//
-//            Map<String, String> answerG = new HashMap<>();
-//            answerG.put("label",sumView.getChoiceG());
-//            if(sumView.getAnswer().contains("G")){
-//                answerG.put("value","1");
-//            }else{
-//                answerG.put("value","G");
-//            }
-//            answerList.add(answerG);
-
+            if(!sumView.getChoiceB().equals("null")){
+                Map<String, String> answerB = new HashMap<>();
+                answerB.put("label",sumView.getChoiceB());
+                if(sumView.getAnswer().contains("B")){
+                    answerB.put("value","1");
+                }else{
+                    answerB.put("value","B");
+                }
+                answerList.add(answerB);
+            }
+            if(!sumView.getChoiceC().equals("null")) {
+                Map<String, String> answerC = new HashMap<>();
+                answerC.put("label", sumView.getChoiceC());
+                if (sumView.getAnswer().contains("C")) {
+                    answerC.put("value", "1");
+                } else {
+                    answerC.put("value", "C");
+                }
+                answerList.add(answerC);
+            }
+            if(!sumView.getChoiceD().equals("null")) {
+                Map<String, String> answerD = new HashMap<>();
+                answerD.put("label", sumView.getChoiceD());
+                if (sumView.getAnswer().contains("D")) {
+                    answerD.put("value", "1");
+                } else {
+                    answerD.put("value", "D");
+                }
+                answerList.add(answerD);
+            }
+            if(!sumView.getChoiceE().equals("null")) {
+                Map<String, String> answerE = new HashMap<>();
+                answerE.put("label", sumView.getChoiceE());
+                if (sumView.getAnswer().contains("E")) {
+                    answerE.put("value", "1");
+                } else {
+                    answerE.put("value", "E");
+                }
+                answerList.add(answerE);
+            }
+            if(!sumView.getChoiceF().equals("null")) {
+                Map<String, String> answerF = new HashMap<>();
+                answerF.put("label", sumView.getChoiceF());
+                if (sumView.getAnswer().contains("F")) {
+                    answerF.put("value", "1");
+                } else {
+                    answerF.put("value", "F");
+                }
+                answerList.add(answerF);
+            }
+            if(!sumView.getChoiceG().equals("null")) {
+                Map<String, String> answerG = new HashMap<>();
+                answerG.put("label", sumView.getChoiceG());
+                if (sumView.getAnswer().contains("G")) {
+                    answerG.put("value", "1");
+                } else {
+                    answerG.put("value", "G");
+                }
+                answerList.add(answerG);
+            }
             map.put("answers",answerList);
 
 
